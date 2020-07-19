@@ -23,6 +23,7 @@ import java.time.Duration;
 
 /**
  * 动态路由配置类
+ * @author alu4r
  */
 @Slf4j
 @Configuration

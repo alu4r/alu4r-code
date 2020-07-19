@@ -17,7 +17,7 @@ import java.util.List;
 
 @Component
 @Slf4j
-public class JeecgRouteDefinitionRepository implements RouteDefinitionRepository {
+public class Alu4rRouteDefinitionRepository implements RouteDefinitionRepository {
 
     public static final String GATEWAY_ROUTES = "geteway_routes";
 
