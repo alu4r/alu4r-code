@@ -10,12 +10,17 @@
         <version>2.3.1.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.alu4r.code</groupId>
     <artifactId>alu4r-code</artifactId>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
 
-
+    <modules>
+        <module>alu4r-code-gateway</module>
+        <module>alu4r-code-system</module>
+        <module>alu4r-code-common</module>
+    </modules>
 
     <distributionManagement>
         <repository>
@@ -50,7 +55,7 @@
     </repositories>
 
     <properties>
-        <jeecgboot.version>2.2.0</jeecgboot.version>
+        <alu4r.code.version>1.0-SNAPSHOT</alu4r.code.version>
         <java.version>1.8</java.version>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
