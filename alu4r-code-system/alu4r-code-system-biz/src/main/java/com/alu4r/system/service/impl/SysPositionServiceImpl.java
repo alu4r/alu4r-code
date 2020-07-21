@@ -1,9 +1,9 @@
 package com.alu4r.system.service.impl;
 
+import com.alu4r.system.mapper.SysPositionMapper;
+import com.alu4r.system.modules.system.entity.SysPosition;
+import com.alu4r.system.service.ISysPositionService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.jeecg.modules.system.entity.SysPosition;
-import org.jeecg.modules.system.mapper.SysPositionMapper;
-import org.jeecg.modules.system.service.ISysPositionService;
 import org.springframework.stereotype.Service;
 
 /**

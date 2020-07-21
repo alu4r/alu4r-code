@@ -15,6 +15,23 @@ import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
 import com.alibaba.fastjson.JSON;
+import com.alu4r.common.core.constant.CacheConstant;
+import com.alu4r.common.core.constant.CommonConstant;
+import com.alu4r.common.core.constant.DataBaseConstant;
+import com.alu4r.common.core.constant.WebsocketConst;
+import com.alu4r.common.core.exception.JeecgBootException;
+import com.alu4r.common.core.system.api.ISysBaseAPI;
+import com.alu4r.common.core.system.vo.*;
+import com.alu4r.common.core.util.*;
+import com.alu4r.common.core.util.oss.OssBootUtil;
+import com.alu4r.message.entity.SysMessageTemplate;
+import com.alu4r.message.service.ISysMessageTemplateService;
+import com.alu4r.message.websocket.WebSocket;
+import com.alu4r.system.mapper.*;
+import com.alu4r.system.modules.system.entity.*;
+import com.alu4r.system.service.ISysDataSourceService;
+import com.alu4r.system.service.ISysDepartService;
+import com.alu4r.system.service.ISysDictService;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
@@ -22,23 +39,6 @@ import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.apache.shiro.SecurityUtils;
-import org.jeecg.common.constant.CacheConstant;
-import org.jeecg.common.constant.CommonConstant;
-import org.jeecg.common.constant.DataBaseConstant;
-import org.jeecg.common.constant.WebsocketConst;
-import org.jeecg.common.exception.JeecgBootException;
-import org.jeecg.common.system.api.ISysBaseAPI;
-import org.jeecg.common.system.vo.*;
-import org.jeecg.common.util.*;
-import org.jeecg.common.util.oss.OssBootUtil;
-import org.jeecg.modules.message.entity.SysMessageTemplate;
-import org.jeecg.modules.message.service.ISysMessageTemplateService;
-import org.jeecg.modules.message.websocket.WebSocket;
-import org.jeecg.modules.system.entity.*;
-import org.jeecg.modules.system.mapper.*;
-import org.jeecg.modules.system.service.ISysDataSourceService;
-import org.jeecg.modules.system.service.ISysDepartService;
-import org.jeecg.modules.system.service.ISysDictService;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -122,7 +122,7 @@ public class SysBaseApiImpl implements ISysBaseAPI {
 	}
 
 	@Override
-	@Cacheable(cacheNames=CacheConstant.SYS_USERS_CACHE, key="#username")
+	@Cacheable(cacheNames= CacheConstant.SYS_USERS_CACHE, key="#username")
 	public LoginUser getUserByName(String username) {
 		if(oConvertUtils.isEmpty(username)) {
 			return null;

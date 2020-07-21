@@ -1,14 +1,14 @@
 package com.alu4r.system.service.impl;
 
-import org.jeecg.modules.system.entity.SysDataLog;
-import org.jeecg.modules.system.mapper.SysDataLogMapper;
-import org.jeecg.modules.system.service.ISysDataLogService;
+import com.alu4r.system.mapper.SysDataLogMapper;
+import com.alu4r.system.modules.system.entity.SysDataLog;
+import com.alu4r.system.service.ISysDataLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 @Service
-public class SysDataLogServiceImpl extends ServiceImpl<SysDataLogMapper,SysDataLog> implements ISysDataLogService {
+public class SysDataLogServiceImpl extends ServiceImpl<SysDataLogMapper, SysDataLog> implements ISysDataLogService {
 	@Autowired
 	private SysDataLogMapper logMapper;
 

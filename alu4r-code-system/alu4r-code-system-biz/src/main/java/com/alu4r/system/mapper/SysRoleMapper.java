@@ -1,8 +1,8 @@
 package com.alu4r.system.mapper;
 
+import com.alu4r.system.modules.system.entity.SysRole;
 import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Param;
-import org.jeecg.modules.system.entity.SysRole;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 

@@ -1,7 +1,7 @@
 package com.alu4r.system.service;
 
-import org.jeecg.modules.system.entity.SysDataLog;
 
+import com.alu4r.system.modules.system.entity.SysDataLog;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 public interface ISysDataLogService extends IService<SysDataLog> {

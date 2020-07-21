@@ -7,10 +7,10 @@ import java.util.Map;
 
 import javax.annotation.Resource;
 
-import org.jeecg.common.system.api.ISysBaseAPI;
-import org.jeecg.modules.system.entity.SysLog;
-import org.jeecg.modules.system.mapper.SysLogMapper;
-import org.jeecg.modules.system.service.ISysLogService;
+import com.alu4r.common.core.system.api.ISysBaseAPI;
+import com.alu4r.system.mapper.SysLogMapper;
+import com.alu4r.system.modules.system.entity.SysLog;
+import com.alu4r.system.service.ISysLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

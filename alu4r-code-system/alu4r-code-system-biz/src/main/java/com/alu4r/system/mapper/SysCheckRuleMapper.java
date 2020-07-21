@@ -1,7 +1,7 @@
 package com.alu4r.system.mapper;
 
+import com.alu4r.system.modules.system.entity.SysCheckRule;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.jeecg.modules.system.entity.SysCheckRule;
 
 /**
  * @Description: 编码校验规则

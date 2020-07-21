@@ -11,16 +11,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import com.alibaba.fastjson.JSON;
+import com.alu4r.common.core.system.query.QueryGenerator;
+import com.alu4r.common.core.system.vo.DictModel;
+import com.alu4r.common.core.system.vo.LoginUser;
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.common.core.vo.Result;
+import com.alu4r.system.modules.system.entity.SysCategory;
+import com.alu4r.system.modules.system.model.TreeSelectModel;
+import com.alu4r.system.service.ISysCategoryService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import org.apache.shiro.SecurityUtils;
-import org.jeecg.common.api.vo.Result;
-import org.jeecg.common.system.query.QueryGenerator;
-import org.jeecg.common.system.vo.DictModel;
-import org.jeecg.common.system.vo.LoginUser;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysCategory;
-import org.jeecg.modules.system.model.TreeSelectModel;
-import org.jeecg.modules.system.service.ISysCategoryService;
 import org.jeecgframework.poi.excel.ExcelImportUtil;
 import org.jeecgframework.poi.excel.def.NormalExcelConstants;
 import org.jeecgframework.poi.excel.entity.ExportParams;
@@ -35,7 +35,7 @@ import org.springframework.web.servlet.ModelAndView;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-
+import com.alu4r.common.core.vo.Result;
 import lombok.extern.slf4j.Slf4j;
 
  /**
@@ -61,9 +61,9 @@ public class SysCategoryController {
 	 */
 	@GetMapping(value = "/rootList")
 	public Result<IPage<SysCategory>> queryPageList(SysCategory sysCategory,
-									  @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
-									  @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,
-									  HttpServletRequest req) {
+                                                    @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
+                                                    @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,
+                                                    HttpServletRequest req) {
 		if(oConvertUtils.isEmpty(sysCategory.getPid())){
 			sysCategory.setPid("0");
 		}
@@ -399,7 +399,7 @@ public class SysCategoryController {
 
 	 /**
 	  * 分类字典控件数据回显[表单页面]
-	  * @param key
+	  * @param ids
 	  * @return
 	  */
 	 @RequestMapping(value = "/loadDictItem", method = RequestMethod.GET)

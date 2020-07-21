@@ -2,11 +2,11 @@ package com.alu4r.system.mapper;
 
 import java.util.List;
 
+import com.alu4r.system.modules.system.entity.SysPermission;
+import com.alu4r.system.modules.system.model.TreeModel;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
-import org.jeecg.modules.system.entity.SysPermission;
-import org.jeecg.modules.system.model.TreeModel;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 

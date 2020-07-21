@@ -11,21 +11,20 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.jeecg.common.api.vo.Result;
-import org.jeecg.common.constant.CacheConstant;
-import org.jeecg.common.constant.CommonConstant;
-import org.jeecg.common.system.query.QueryGenerator;
-import org.jeecg.common.util.PmsUtil;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysPermission;
-import org.jeecg.modules.system.entity.SysPermissionDataRule;
-import org.jeecg.modules.system.entity.SysRole;
-import org.jeecg.modules.system.entity.SysRolePermission;
-import org.jeecg.modules.system.model.TreeModel;
-import org.jeecg.modules.system.service.ISysPermissionDataRuleService;
-import org.jeecg.modules.system.service.ISysPermissionService;
-import org.jeecg.modules.system.service.ISysRolePermissionService;
-import org.jeecg.modules.system.service.ISysRoleService;
+import com.alu4r.common.core.constant.CommonConstant;
+import com.alu4r.common.core.system.query.QueryGenerator;
+import com.alu4r.common.core.system.vo.LoginUser;
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.common.core.vo.Result;
+import com.alu4r.system.modules.system.entity.SysPermission;
+import com.alu4r.system.modules.system.entity.SysPermissionDataRule;
+import com.alu4r.system.modules.system.entity.SysRole;
+import com.alu4r.system.modules.system.entity.SysRolePermission;
+import com.alu4r.system.modules.system.model.TreeModel;
+import com.alu4r.system.service.ISysPermissionDataRuleService;
+import com.alu4r.system.service.ISysPermissionService;
+import com.alu4r.system.service.ISysRolePermissionService;
+import com.alu4r.system.service.ISysRoleService;
 import org.jeecgframework.poi.excel.def.NormalExcelConstants;
 import org.jeecgframework.poi.excel.entity.ExportParams;
 import org.jeecgframework.poi.excel.entity.ImportParams;
@@ -42,7 +41,6 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
-import org.jeecg.common.system.vo.LoginUser;
 import org.apache.shiro.SecurityUtils;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
@@ -51,7 +49,7 @@ import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 
 import lombok.extern.slf4j.Slf4j;
-
+import com.alu4r.common.core.vo.Result;
 /**
  * <p>
  * 角色表 前端控制器
@@ -86,9 +84,9 @@ public class SysRoleController {
 	 */
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public Result<IPage<SysRole>> queryPageList(SysRole role,
-									  @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
-									  @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,
-									  HttpServletRequest req) {
+                                                @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
+                                                @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,
+                                                HttpServletRequest req) {
 		Result<IPage<SysRole>> result = new Result<IPage<SysRole>>();
 		QueryWrapper<SysRole> queryWrapper = QueryGenerator.initQueryWrapper(role, req.getParameterMap());
 		Page<SysRole> page = new Page<SysRole>(pageNo, pageSize);
@@ -381,7 +379,7 @@ public class SysRoleController {
 		return result;
 	}
 	
-	private void getTreeModelList(List<TreeModel> treeList,List<SysPermission> metaList,TreeModel temp) {
+	private void getTreeModelList(List<TreeModel> treeList, List<SysPermission> metaList, TreeModel temp) {
 		for (SysPermission permission : metaList) {
 			String tempPid = permission.getParentId();
 			TreeModel tree = new TreeModel(permission.getId(), tempPid, permission.getName(),permission.getRuleFlag(), permission.isLeaf());

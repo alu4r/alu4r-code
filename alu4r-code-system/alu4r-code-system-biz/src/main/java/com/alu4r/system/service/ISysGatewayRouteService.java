@@ -1,8 +1,8 @@
 package com.alu4r.system.service;
 
 import com.alibaba.fastjson.JSONArray;
+import com.alu4r.system.modules.system.entity.SysGatewayRoute;
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.jeecg.modules.system.entity.SysGatewayRoute;
 
 /**
  * @Description: gateway路由管理

@@ -1,7 +1,7 @@
 package com.alu4r.system.service;
 
-import org.jeecg.modules.system.entity.SysUserRole;
 
+import com.alu4r.system.modules.system.entity.SysUserRole;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

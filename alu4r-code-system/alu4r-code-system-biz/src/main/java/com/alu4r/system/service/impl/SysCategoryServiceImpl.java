@@ -4,15 +4,14 @@ import java.util.List;
 import java.util.Map;
 
 import com.alibaba.fastjson.JSONObject;
-import org.jeecg.common.constant.FillRuleConstant;
-import org.jeecg.common.exception.JeecgBootException;
-import org.jeecg.common.util.FillRuleUtil;
-import org.jeecg.common.util.YouBianCodeUtil;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysCategory;
-import org.jeecg.modules.system.mapper.SysCategoryMapper;
-import org.jeecg.modules.system.model.TreeSelectModel;
-import org.jeecg.modules.system.service.ISysCategoryService;
+import com.alu4r.common.core.constant.FillRuleConstant;
+import com.alu4r.common.core.exception.JeecgBootException;
+import com.alu4r.common.core.util.FillRuleUtil;
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.system.mapper.SysCategoryMapper;
+import com.alu4r.system.modules.system.entity.SysCategory;
+import com.alu4r.system.modules.system.model.TreeSelectModel;
+import com.alu4r.system.service.ISysCategoryService;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
@@ -71,7 +70,7 @@ public class SysCategoryServiceImpl extends ServiceImpl<SysCategoryMapper, SysCa
 	}
 
 	@Override
-	public List<TreeSelectModel> queryListByCode(String pcode) throws JeecgBootException{
+	public List<TreeSelectModel> queryListByCode(String pcode) throws JeecgBootException {
 		String pid = ROOT_PID_VALUE;
 		if(oConvertUtils.isNotEmpty(pcode)) {
 			List<SysCategory> list = baseMapper.selectList(new LambdaQueryWrapper<SysCategory>().eq(SysCategory::getCode, pcode));

@@ -1,12 +1,12 @@
 package com.alu4r.system.service.impl;
 
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.system.mapper.SysDepartRoleMapper;
+import com.alu4r.system.mapper.SysDepartRoleUserMapper;
+import com.alu4r.system.modules.system.entity.SysDepartRole;
+import com.alu4r.system.modules.system.entity.SysDepartRoleUser;
+import com.alu4r.system.service.ISysDepartRoleUserService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysDepartRole;
-import org.jeecg.modules.system.entity.SysDepartRoleUser;
-import org.jeecg.modules.system.mapper.SysDepartRoleMapper;
-import org.jeecg.modules.system.mapper.SysDepartRoleUserMapper;
-import org.jeecg.modules.system.service.ISysDepartRoleUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

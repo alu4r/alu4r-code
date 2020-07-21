@@ -1,6 +1,6 @@
 package com.alu4r.system.mapper;
 
-import org.jeecg.modules.system.entity.SysDepartRolePermission;
+import com.alu4r.system.modules.system.entity.SysDepartRolePermission;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

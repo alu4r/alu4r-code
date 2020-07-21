@@ -7,13 +7,13 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.jeecg.common.constant.CommonConstant;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysAnnouncement;
-import org.jeecg.modules.system.entity.SysAnnouncementSend;
-import org.jeecg.modules.system.mapper.SysAnnouncementMapper;
-import org.jeecg.modules.system.mapper.SysAnnouncementSendMapper;
-import org.jeecg.modules.system.service.ISysAnnouncementService;
+import com.alu4r.common.core.constant.CommonConstant;
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.system.mapper.SysAnnouncementMapper;
+import com.alu4r.system.mapper.SysAnnouncementSendMapper;
+import com.alu4r.system.modules.system.entity.SysAnnouncement;
+import com.alu4r.system.modules.system.entity.SysAnnouncementSend;
+import com.alu4r.system.service.ISysAnnouncementService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

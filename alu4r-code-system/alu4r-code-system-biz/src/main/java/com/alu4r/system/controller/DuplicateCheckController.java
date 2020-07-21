@@ -2,10 +2,10 @@ package com.alu4r.system.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.alu4r.common.core.vo.Result;
+import com.alu4r.system.mapper.SysDictMapper;
+import com.alu4r.system.modules.system.model.DuplicateCheckVo;
 import org.apache.commons.lang.StringUtils;
-import org.jeecg.common.api.vo.Result;
-import org.jeecg.modules.system.mapper.SysDictMapper;
-import org.jeecg.modules.system.model.DuplicateCheckVo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -29,7 +29,7 @@ import lombok.extern.slf4j.Slf4j;
 public class DuplicateCheckController {
 
 	@Autowired
-	SysDictMapper sysDictMapper;
+    SysDictMapper sysDictMapper;
 
 	/**
 	 * 校验数据是否在系统中是否存在

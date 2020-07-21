@@ -1,11 +1,254 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="9737021f-9499-4137-ae78-9a91c3ccf4e3" name="Default Changelist" comment="" />
+    <list default="true" id="9737021f-9499-4137-ae78-9a91c3ccf4e3" name="Default Changelist" comment="添加公告模块">
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/config/ShiroConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/api/SysBaseRemoteApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/api/SysUserRemoteApi.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/api/factory/SysBaseRemoteApiFallbackFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/api/factory/SysUserRemoteApiFallbackFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/api/fallback/SysBaseRemoteApiFallback.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/api/fallback/SysUserRemoteApiFallbackImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/shiro/authc/JwtToken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/shiro/authc/ShiroRealm.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/shiro/authc/aop/JwtFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/shiro/authc/aop/ResourceCheckFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/shiro/interceptor/OnlineInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/shiro/vo/DefContants.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/shiro/vo/ResponseBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/shiro/vo/UserBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/aspect/AutoLogAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/aspect/DictAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/aspect/PermissionDataAspect.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/aspect/UrlMatchEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysAnnouncement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysAnnouncementSend.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysCategory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysCheckRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysDataLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysDepart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysDepartPermission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysDepartRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysDepartRolePermission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysDepartRoleUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysDict.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysDictItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysFillRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysGatewayRoute.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysLog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysPermission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysPermissionDataRule.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysPosition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysRolePermission.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysUserAgent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysUserDepart.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/entity/SysUserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/model/AnnouncementSendModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/model/DepartIdModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/model/DuplicateCheckVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/model/SysDepartTreeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/model/SysDictTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/model/SysLoginModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/model/SysPermissionTree.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/model/SysUserSysDepartModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/model/TreeModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/model/TreeSelectModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/vo/SysDepartUsersVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/vo/SysDictPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/vo/SysUserDepVo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/src/main/java/com/alu4r/system/modules/system/vo/SysUserRoleVO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/controller/SysMessageController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/controller/SysMessageTemplateController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/entity/MsgParams.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/entity/SysMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/entity/SysMessageTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/handle/ISendMsgHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/handle/enums/SendMsgStatusEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/handle/enums/SendMsgTypeEnum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/handle/impl/EmailSendMsgHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/handle/impl/SmsSendMsgHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/handle/impl/WxSendMsgHandle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/job/SendMsgJob.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/mapper/SysMessageMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/mapper/SysMessageTemplateMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/mapper/xml/SysMessageMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/mapper/xml/SysMessageTemplateMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/service/ISysMessageService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/service/ISysMessageTemplateService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/service/impl/SysMessageServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/service/impl/SysMessageTemplateServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/util/PushMsgUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/websocket/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/message/websocket/WebSocket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/oss/controller/OSSFileController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/oss/entity/OSSFile.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/oss/mapper/OSSFileMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/oss/service/IOSSFileService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/oss/service/impl/OSSFileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-gateway/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-gateway/src/main/resources/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/DuplicateCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/DuplicateCheckController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysAnnouncementController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysAnnouncementController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysAnnouncementSendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysAnnouncementSendController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysCheckRuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysCheckRuleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysDataLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysDataLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysDataSourceController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysDataSourceController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysDepartController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysDepartController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysDepartPermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysDepartPermissionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysDepartRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysDepartRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysDictController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysDictController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysDictItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysDictItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysFillRuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysFillRuleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysGatewayRouteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysGatewayRouteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysLogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysLogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysPermissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysPermissionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysPositionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysPositionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysRoleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysUploadController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysUploadController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysUserAgentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysUserAgentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/SysUserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/ThirdLoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/controller/ThirdLoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysAnnouncementMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysAnnouncementMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysAnnouncementSendMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysAnnouncementSendMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysCategoryMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysCategoryMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysCheckRuleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysCheckRuleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDataLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDataLogMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDataSourceMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDataSourceMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDepartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDepartMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDepartPermissionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDepartPermissionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDepartRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDepartRoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDepartRolePermissionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDepartRolePermissionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDepartRoleUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDepartRoleUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDictItemMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDictItemMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDictMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysDictMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysFillRuleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysFillRuleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysGatewayRouteMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysGatewayRouteMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysLogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysLogMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysPermissionDataRuleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysPermissionDataRuleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysPermissionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysPermissionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysPositionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysPositionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysRoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysRolePermissionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysRolePermissionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysUserAgentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysUserAgentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysUserDepartMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysUserDepartMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysUserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysUserRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/SysUserRoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysAnnouncementMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysAnnouncementMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysAnnouncementSendMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysAnnouncementSendMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysCategoryMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysCategoryMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysCheckRuleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysCheckRuleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDataLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDataLogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDataSourceMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDataSourceMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDepartMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDepartMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDepartPermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDepartPermissionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDepartRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDepartRoleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDepartRolePermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDepartRolePermissionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDepartRoleUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDepartRoleUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDictItemMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDictItemMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDictMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysDictMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysFillRuleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysFillRuleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysGatewayRouteMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysGatewayRouteMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysLogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysLogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysPermissionDataRuleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysPermissionDataRuleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysPermissionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysPermissionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysPositionMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysPositionMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysUserAgentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysUserAgentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysUserDepartMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysUserDepartMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/mapper/xml/SysUserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/rule/CategoryCodeRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/rule/CategoryCodeRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/rule/OrgCodeRule.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/rule/OrgCodeRule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysAnnouncementSendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysAnnouncementSendService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysAnnouncementService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysAnnouncementService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysCategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysCheckRuleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysCheckRuleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDataLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDataLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDataSourceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDataSourceService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDepartPermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDepartPermissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDepartRolePermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDepartRolePermissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDepartRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDepartRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDepartRoleUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDepartRoleUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDepartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDepartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDictItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDictItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDictService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysDictService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysFillRuleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysFillRuleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysGatewayRouteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysGatewayRouteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysLogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysLogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysPermissionDataRuleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysPermissionDataRuleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysPermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysPermissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysPositionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysPositionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysRolePermissionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysRolePermissionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysUserAgentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysUserAgentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysUserDepartService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysUserDepartService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysUserRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysUserRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/ISysUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/AutoPoiDictService.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/AutoPoiDictService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/ImportFileServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/ImportFileServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysAnnouncementSendServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysAnnouncementSendServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysAnnouncementServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysAnnouncementServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysBaseApiImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysBaseApiImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysCategoryServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysCategoryServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysCheckRuleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysCheckRuleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDataLogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDataLogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDataSourceServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDataSourceServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDepartPermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDepartPermissionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDepartRolePermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDepartRolePermissionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDepartRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDepartRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDepartRoleUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDepartRoleUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDepartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDepartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDictItemServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDictItemServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDictServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysDictServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysFillRuleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysFillRuleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysGatewayRouteServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysGatewayRouteServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysLogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysLogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysPermissionDataRuleImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysPermissionDataRuleImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysPermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysPermissionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysPositionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysPositionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysRolePermissionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysRolePermissionServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysUserAgentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysUserAgentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysUserDepartServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysUserDepartServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysUserRoleServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysUserRoleServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysUserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/service/impl/SysUserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/util/FindsDepartsChildrenUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/util/FindsDepartsChildrenUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/util/PermissionDataUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-biz/src/main/java/com/alu4r/system/util/PermissionDataUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alu4r-code-system/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/alu4r-code-system/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JRebelWorkspace">
+    <option name="jrebelEnabledAutocompile" value="true" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -14,25 +257,91 @@
         <option name="userSettingsFile" value="C:\Program Files\apache-maven-3.6.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="downloadSourcesAutomatically" value="true" />
+        <option name="jdkForImporter" value="1.8.0_241" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
   </component>
   <component name="ProjectId" id="1etxGjveLNx0BYgZ2VffwavozI5" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Other File Types" />
+    <property name="jdk.selected.JAVA_MODULE" value="1.8.0_241" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.51839083" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.import" />
+  </component>
+  <component name="ReactorSettings">
+    <option name="notificationShown" value="true" />
   </component>
   <component name="RebelAgentSelection">
     <selection>jr</selection>
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\workspace\Gitee\alu4r-code" />
+      <recent name="E:\workspace\Gitee\alu4r-code\alu4r-code-system\alu4r-code-system-biz\src\main\java\com\alu4r" />
+      <recent name="E:\workspace\Gitee\alu4r-code\alu4r-code-system\alu4r-code-system-api\src\main\java\com\alu4r\system" />
+      <recent name="E:\workspace\Gitee\alu4r-code\alu4r-code-system\alu4r-code-system-api\src\main\java" />
+      <recent name="E:\workspace\Gitee\alu4r-code\alu4r-code-common\alu4r-code-common-core\src\main\java\com\alu4r\common\core" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.alu4r.common.cloud.config" />
+      <recent name="com.alu4r.system" />
+      <recent name="com.alu4r.gateway" />
+      <recent name="com.alu4r" />
+      <recent name="com.alu4r.config" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\workspace\Gitee\alu4r-code\alu4r-code-system\alu4r-code-system-biz\src\main\java\com\alu4r\system" />
+      <recent name="E:\workspace\Gitee\alu4r-code" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.JeecgGatewayApplication">
+    <configuration name="JeecgGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="alu4r-code-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.alu4r.gateway.Alu4rGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JeecgSystemApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="alu4r-code-system-biz" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.alu4r.system.JeecgSystemApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -44,8 +353,181 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595154596339</updated>
-      <workItem from="1595154599608" duration="1000" />
+      <workItem from="1595154599608" duration="1662000" />
+      <workItem from="1595156305878" duration="5566000" />
+      <workItem from="1595171917323" duration="2696000" />
+      <workItem from="1595256233877" duration="21000" />
+      <workItem from="1595256309114" duration="8718000" />
+      <workItem from="1595335082907" duration="2209000" />
+      <workItem from="1595337559106" duration="4253000" />
+      <workItem from="1595341957279" duration="6125000" />
     </task>
+    <task id="LOCAL-00001" summary="添加md文件">
+      <created>1595154927749</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1595154927749</updated>
+    </task>
+    <task id="LOCAL-00002" summary="添加md文件">
+      <created>1595171133471</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595171133471</updated>
+    </task>
+    <task id="LOCAL-00003" summary="基于jeecg搭建结构">
+      <created>1595173979605</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1595173979605</updated>
+    </task>
+    <task id="LOCAL-00004" summary="学习一些网关">
+      <created>1595174599333</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1595174599333</updated>
+    </task>
+    <task id="LOCAL-00005" summary="12">
+      <created>1595307460547</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1595307460547</updated>
+    </task>
+    <task id="LOCAL-00006" summary="添加公告模块">
+      <created>1595341679281</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1595341679281</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="添加md文件" />
+    <MESSAGE value="基于jeecg搭建结构" />
+    <MESSAGE value="学习一些网关" />
+    <MESSAGE value="网关限流学习" />
+    <MESSAGE value="12" />
+    <MESSAGE value="添加公告模块" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加公告模块" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1480" y="94" key="#Project_Structure" timestamp="1595338933031">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1480" y="94" key="#Project_Structure/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595338933031" />
+    <state x="-1506" y="174" width="1174" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1595256451053">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1506" y="174" width="1174" height="691" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595256451053" />
+    <state x="-1155" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1595340466231">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1155" y="442" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595340466231" />
+    <state x="-1209" y="344" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1595172966484">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1209" y="344" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595172966484" />
+    <state x="-1180" y="260" key="FileChooserDialogImpl" timestamp="1595343460372">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1180" y="260" key="FileChooserDialogImpl/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595343460372" />
+    <state width="1877" height="305" key="GridCell.Tab.0.bottom" timestamp="1595348168556">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="305" key="GridCell.Tab.0.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595348168556" />
+    <state width="1877" height="305" key="GridCell.Tab.0.center" timestamp="1595348168556">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="305" key="GridCell.Tab.0.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595348168556" />
+    <state width="1877" height="305" key="GridCell.Tab.0.left" timestamp="1595348168556">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="305" key="GridCell.Tab.0.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595348168556" />
+    <state width="1877" height="305" key="GridCell.Tab.0.right" timestamp="1595348168556">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="305" key="GridCell.Tab.0.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595348168556" />
+    <state width="1877" height="256" key="GridCell.Tab.1.bottom" timestamp="1595337545254">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="256" key="GridCell.Tab.1.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595337545254" />
+    <state width="1877" height="256" key="GridCell.Tab.1.center" timestamp="1595337545254">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="256" key="GridCell.Tab.1.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595337545254" />
+    <state width="1877" height="256" key="GridCell.Tab.1.left" timestamp="1595337545254">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="256" key="GridCell.Tab.1.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595337545254" />
+    <state width="1877" height="256" key="GridCell.Tab.1.right" timestamp="1595337545254">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="256" key="GridCell.Tab.1.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595337545254" />
+    <state width="1877" height="256" key="GridCell.Tab.2.bottom" timestamp="1595337545254">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="256" key="GridCell.Tab.2.bottom/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595337545254" />
+    <state width="1877" height="256" key="GridCell.Tab.2.center" timestamp="1595337545254">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="256" key="GridCell.Tab.2.center/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595337545254" />
+    <state width="1877" height="256" key="GridCell.Tab.2.left" timestamp="1595337545254">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="256" key="GridCell.Tab.2.left/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595337545254" />
+    <state width="1877" height="256" key="GridCell.Tab.2.right" timestamp="1595337545254">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="256" key="GridCell.Tab.2.right/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595337545254" />
+    <state x="-1430" y="174" key="Maven.ArtifactSearchDialog" timestamp="1595169672968">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1430" y="174" key="Maven.ArtifactSearchDialog/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595169672968" />
+    <state x="-1459" y="164" key="SettingsEditor" timestamp="1595348158224">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1459" y="164" key="SettingsEditor/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595348158224" />
+    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2" timestamp="1595307468951">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1368" y="252" key="Vcs.Push.Dialog.v2/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595307468951" />
+    <state x="-1444" y="113" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595339366115">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1444" y="113" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595339366115" />
+    <state x="-1259" y="252" width="598" height="536" key="find.popup" timestamp="1595338393525">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1259" y="252" width="598" height="536" key="find.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595338393525" />
+    <state x="-1640" y="235" key="new project wizard" timestamp="1595347999730">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1640" y="235" key="new project wizard/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595347999730" />
+    <state x="-1304" y="173" width="670" height="676" key="search.everywhere.popup" timestamp="1595346652645">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1304" y="173" width="670" height="676" key="search.everywhere.popup/0.0.1536.824/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1595346652645" />
   </component>
 </project>

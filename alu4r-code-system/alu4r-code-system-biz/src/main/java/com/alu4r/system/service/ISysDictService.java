@@ -1,14 +1,15 @@
 package com.alu4r.system.service;
 
+import com.alu4r.common.core.system.vo.DictModel;
+import com.alu4r.common.core.system.vo.DictQuery;
+import com.alu4r.system.modules.system.entity.SysDict;
+import com.alu4r.system.modules.system.entity.SysDictItem;
+import com.alu4r.system.modules.system.model.TreeSelectModel;
+import com.baomidou.mybatisplus.extension.service.IService;
+
 import java.util.List;
 import java.util.Map;
 
-import org.jeecg.common.system.vo.DictModel;
-import org.jeecg.common.system.vo.DictQuery;
-import org.jeecg.modules.system.entity.SysDict;
-import com.baomidou.mybatisplus.extension.service.IService;
-import org.jeecg.modules.system.entity.SysDictItem;
-import org.jeecg.modules.system.model.TreeSelectModel;
 
 /**
  * <p>
@@ -85,7 +86,7 @@ public interface ISysDictService extends IService<SysDict> {
 	 * @return
 	 */
 	@Deprecated
-	List<TreeSelectModel> queryTreeList(Map<String, String> query,String table, String text, String code, String pidField,String pid,String hasChildField);
+	List<TreeSelectModel> queryTreeList(Map<String, String> query, String table, String text, String code, String pidField, String pid, String hasChildField);
 
 	/**
 	 * 真实删除
@@ -114,6 +115,6 @@ public interface ISysDictService extends IService<SysDict> {
 	 * @return
 	 */
 	@Deprecated
-	public List<DictModel> queryDictTablePageList(DictQuery query,int pageSize, int pageNo);
+	public List<DictModel> queryDictTablePageList(DictQuery query, int pageSize, int pageNo);
 
 }

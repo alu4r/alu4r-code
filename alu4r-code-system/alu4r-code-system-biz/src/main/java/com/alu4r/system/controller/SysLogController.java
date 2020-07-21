@@ -7,15 +7,14 @@ import javax.servlet.http.HttpServletRequest;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import org.jeecg.common.api.vo.Result;
-import org.jeecg.common.system.query.QueryGenerator;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysLog;
-import org.jeecg.modules.system.entity.SysRole;
-import org.jeecg.modules.system.service.ISysLogService;
+import com.alu4r.common.core.system.query.QueryGenerator;
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.system.modules.system.entity.SysLog;
+import com.alu4r.system.modules.system.entity.SysRole;
+import com.alu4r.system.service.ISysLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+import com.alu4r.common.core.vo.Result;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -47,8 +46,8 @@ public class SysLogController {
 	 * @return
 	 */
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public Result<IPage<SysLog>> queryPageList(SysLog syslog,@RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
-									  @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,HttpServletRequest req) {
+	public Result<IPage<SysLog>> queryPageList(SysLog syslog, @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
+                                               @RequestParam(name="pageSize", defaultValue="10") Integer pageSize, HttpServletRequest req) {
 		Result<IPage<SysLog>> result = new Result<IPage<SysLog>>();
 		QueryWrapper<SysLog> queryWrapper = QueryGenerator.initQueryWrapper(syslog, req.getParameterMap());
 		Page<SysLog> page = new Page<SysLog>(pageNo, pageSize);

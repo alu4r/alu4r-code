@@ -3,9 +3,9 @@ package com.alu4r.system.service.impl;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.jeecg.common.system.vo.DictModel;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.mapper.SysDictMapper;
+import com.alu4r.common.core.system.vo.DictModel;
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.system.mapper.SysDictMapper;
 import org.jeecgframework.dict.service.AutoPoiDictServiceI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,9 +1,10 @@
 package com.alu4r.system.util;
 
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.system.modules.system.entity.SysPermission;
+
 import java.util.List;
 
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysPermission;
 
 /**
  * @Author: scott

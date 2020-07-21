@@ -1,13 +1,13 @@
 package com.alu4r.system.rule;
 
 import com.alibaba.fastjson.JSONObject;
+import com.alu4r.common.core.handler.IFillRuleHandler;
+import com.alu4r.common.core.util.SpringContextUtils;
+import com.alu4r.common.core.util.YouBianCodeUtil;
+import com.alu4r.system.modules.system.entity.SysDepart;
+import com.alu4r.system.service.ISysDepartService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import io.netty.util.internal.StringUtil;
-import org.jeecg.common.handler.IFillRuleHandler;
-import org.jeecg.common.util.SpringContextUtils;
-import org.jeecg.common.util.YouBianCodeUtil;
-import org.jeecg.modules.system.entity.SysDepart;
-import org.jeecg.modules.system.service.ISysDepartService;
 
 import java.util.ArrayList;
 import java.util.List;

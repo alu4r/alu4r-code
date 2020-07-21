@@ -5,10 +5,19 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/alu4r-code-common/alu4r-code-common-cloud-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/alu4r-code-system/alu4r-code-system-api/pom.xml" />
+        <option value="$PROJECT_DIR$/alu4r-code-system/pom.xml" />
       </list>
     </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/alu4r-code-common-cloud-starter/pom.xml" />
+        <option value="$PROJECT_DIR$/alu4r-code-system-api/pom.xml" />
+      </set>
+    </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8.0_241" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="1.8.0_241" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

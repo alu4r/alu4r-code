@@ -1,19 +1,18 @@
 package com.alu4r.system.controller;
 
+import com.alu4r.common.core.util.CommonUtils;
+import com.alu4r.common.core.util.MinioUtil;
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.oss.entity.OSSFile;
+import com.alu4r.oss.service.IOSSFileService;
 import lombok.extern.slf4j.Slf4j;
-import org.jeecg.common.api.vo.Result;
-import org.jeecg.common.util.CommonUtils;
-import org.jeecg.common.util.MinioUtil;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.oss.entity.OSSFile;
-import org.jeecg.modules.oss.service.IOSSFileService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
-
+import com.alu4r.common.core.vo.Result;
 import javax.servlet.http.HttpServletRequest;
 
 /**

@@ -12,8 +12,8 @@
     <artifactId>alu4r-code-system</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>alu4r-code-system-api</module>
         <module>alu4r-code-system-biz</module>
+        <module>alu4r-code-system-api</module>
     </modules>
 
 

@@ -48,8 +48,8 @@ spring:
               args:
                 name: default
                 fallbackUri: 'forward:/fallback'
-        - id: jeecg-cloud-system-biz
-          uri: lb://jeecg-cloud-system-biz
+        - id: alu4r-code-system-biz
+          uri: lb://alu4r-code-system-biz
           predicates:
             - Path=/sys/**,/test/**,/online/**,/api/**,/big/screen/**,/bigscreen/**,/webSocketApi/**,/message/**
           #限流配置
@@ -65,7 +65,7 @@ spring:
                 name: default
                 fallbackUri: 'forward:/fallback'
         - id: jeecg-cloud-websocket
-          uri: lb:ws://jeecg-cloud-system-biz
+          uri: lb:ws://alu4r-code-system-biz
           predicates:
             - Path=/websocket/**
 management:

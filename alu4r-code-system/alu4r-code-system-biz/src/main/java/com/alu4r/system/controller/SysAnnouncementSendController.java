@@ -5,14 +5,14 @@ import java.util.Date;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.alu4r.common.core.constant.CommonConstant;
+import com.alu4r.common.core.system.vo.LoginUser;
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.common.core.vo.Result;
+import com.alu4r.system.modules.system.entity.SysAnnouncementSend;
+import com.alu4r.system.modules.system.model.AnnouncementSendModel;
+import com.alu4r.system.service.ISysAnnouncementSendService;
 import org.apache.shiro.SecurityUtils;
-import org.jeecg.common.api.vo.Result;
-import org.jeecg.common.constant.CommonConstant;
-import org.jeecg.common.system.vo.LoginUser;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysAnnouncementSend;
-import org.jeecg.modules.system.model.AnnouncementSendModel;
-import org.jeecg.modules.system.service.ISysAnnouncementSendService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+import com.alu4r.common.core.vo.Result;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.LambdaUpdateWrapper;
@@ -56,9 +56,9 @@ public class SysAnnouncementSendController {
 	 */
 	@GetMapping(value = "/list")
 	public Result<IPage<SysAnnouncementSend>> queryPageList(SysAnnouncementSend sysAnnouncementSend,
-									  @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
-									  @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,
-									  HttpServletRequest req) {
+                                                            @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
+                                                            @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,
+                                                            HttpServletRequest req) {
 		Result<IPage<SysAnnouncementSend>> result = new Result<IPage<SysAnnouncementSend>>();
 		QueryWrapper<SysAnnouncementSend> queryWrapper = new QueryWrapper<SysAnnouncementSend>(sysAnnouncementSend);
 		Page<SysAnnouncementSend> page = new Page<SysAnnouncementSend>(pageNo,pageSize);
@@ -205,8 +205,8 @@ public class SysAnnouncementSendController {
 	 */
 	@GetMapping(value = "/getMyAnnouncementSend")
 	public Result<IPage<AnnouncementSendModel>> getMyAnnouncementSend(AnnouncementSendModel announcementSendModel,
-			@RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
-			  @RequestParam(name="pageSize", defaultValue="10") Integer pageSize) {
+                                                                      @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
+                                                                      @RequestParam(name="pageSize", defaultValue="10") Integer pageSize) {
 		Result<IPage<AnnouncementSendModel>> result = new Result<IPage<AnnouncementSendModel>>();
 		LoginUser sysUser = (LoginUser)SecurityUtils.getSubject().getPrincipal();
 		String userId = sysUser.getId();

@@ -1,8 +1,8 @@
 package com.alu4r.system.service.impl;
 
-import org.jeecg.modules.system.entity.SysDictItem;
-import org.jeecg.modules.system.mapper.SysDictItemMapper;
-import org.jeecg.modules.system.service.ISysDictItemService;
+import com.alu4r.system.mapper.SysDictItemMapper;
+import com.alu4r.system.modules.system.entity.SysDictItem;
+import com.alu4r.system.service.ISysDictItemService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

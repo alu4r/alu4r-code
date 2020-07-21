@@ -3,14 +3,14 @@ package com.alu4r.system.service.impl;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.alu4r.common.core.constant.CacheConstant;
+import com.alu4r.system.config.GatewayRouteInitEvent;
+import com.alu4r.system.mapper.SysGatewayRouteMapper;
+import com.alu4r.system.modules.system.entity.SysGatewayRoute;
+import com.alu4r.system.service.ISysGatewayRouteService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.jeecg.common.constant.CacheConstant;
-import org.jeecg.modules.config.GatewayRouteInitEvent;
-import org.jeecg.modules.system.entity.SysGatewayRoute;
-import org.jeecg.modules.system.mapper.SysGatewayRouteMapper;
-import org.jeecg.modules.system.service.ISysGatewayRouteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.context.ApplicationEventPublisherAware;
@@ -29,7 +29,7 @@ import java.util.List;
  */
 @Service
 @Slf4j
-public class SysGatewayRouteServiceImpl extends ServiceImpl<SysGatewayRouteMapper, SysGatewayRoute> implements ApplicationEventPublisherAware,ISysGatewayRouteService {
+public class SysGatewayRouteServiceImpl extends ServiceImpl<SysGatewayRouteMapper, SysGatewayRoute> implements ApplicationEventPublisherAware, ISysGatewayRouteService {
 
     @Autowired
     private RedisTemplate<String, Object> redisTemplate;

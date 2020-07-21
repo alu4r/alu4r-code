@@ -1,6 +1,6 @@
 package com.alu4r.system.service;
 
-import org.jeecg.modules.system.entity.SysRolePermission;
+import com.alu4r.system.modules.system.entity.SysRolePermission;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

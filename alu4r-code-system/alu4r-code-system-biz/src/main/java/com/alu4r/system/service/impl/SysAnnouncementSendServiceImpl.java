@@ -4,10 +4,10 @@ import java.util.List;
 
 import javax.annotation.Resource;
 
-import org.jeecg.modules.system.entity.SysAnnouncementSend;
-import org.jeecg.modules.system.mapper.SysAnnouncementSendMapper;
-import org.jeecg.modules.system.model.AnnouncementSendModel;
-import org.jeecg.modules.system.service.ISysAnnouncementSendService;
+import com.alu4r.system.mapper.SysAnnouncementSendMapper;
+import com.alu4r.system.modules.system.entity.SysAnnouncementSend;
+import com.alu4r.system.modules.system.model.AnnouncementSendModel;
+import com.alu4r.system.service.ISysAnnouncementSendService;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -32,7 +32,7 @@ public class SysAnnouncementSendServiceImpl extends ServiceImpl<SysAnnouncementS
 
 	@Override
 	public Page<AnnouncementSendModel> getMyAnnouncementSendPage(Page<AnnouncementSendModel> page,
-			AnnouncementSendModel announcementSendModel) {
+                                                                 AnnouncementSendModel announcementSendModel) {
 		 return page.setRecords(sysAnnouncementSendMapper.getMyAnnouncementSendList(page, announcementSendModel));
 	}
 

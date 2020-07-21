@@ -1,9 +1,9 @@
 package com.alu4r.system.service.impl;
 
+import com.alu4r.system.mapper.SysDataSourceMapper;
+import com.alu4r.system.modules.system.entity.SysDataSource;
+import com.alu4r.system.service.ISysDataSourceService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.jeecg.modules.system.entity.SysDataSource;
-import org.jeecg.modules.system.mapper.SysDataSourceMapper;
-import org.jeecg.modules.system.service.ISysDataSourceService;
 import org.springframework.stereotype.Service;
 
 /**

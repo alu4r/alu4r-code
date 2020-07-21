@@ -1,6 +1,6 @@
 package com.alu4r.system.service;
 
-import org.jeecg.modules.system.entity.SysDictItem;
+import com.alu4r.system.modules.system.entity.SysDictItem;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;

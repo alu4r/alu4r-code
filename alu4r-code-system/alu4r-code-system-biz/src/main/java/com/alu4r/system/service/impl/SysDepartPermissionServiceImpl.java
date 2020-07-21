@@ -1,17 +1,17 @@
 package com.alu4r.system.service.impl;
 
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.system.mapper.SysDepartPermissionMapper;
+import com.alu4r.system.mapper.SysDepartRoleMapper;
+import com.alu4r.system.mapper.SysDepartRolePermissionMapper;
+import com.alu4r.system.mapper.SysPermissionDataRuleMapper;
+import com.alu4r.system.modules.system.entity.SysDepartPermission;
+import com.alu4r.system.modules.system.entity.SysDepartRole;
+import com.alu4r.system.modules.system.entity.SysDepartRolePermission;
+import com.alu4r.system.modules.system.entity.SysPermissionDataRule;
+import com.alu4r.system.service.ISysDepartPermissionService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysDepartPermission;
-import org.jeecg.modules.system.entity.SysDepartRole;
-import org.jeecg.modules.system.entity.SysDepartRolePermission;
-import org.jeecg.modules.system.entity.SysPermissionDataRule;
-import org.jeecg.modules.system.mapper.SysDepartPermissionMapper;
-import org.jeecg.modules.system.mapper.SysDepartRoleMapper;
-import org.jeecg.modules.system.mapper.SysDepartRolePermissionMapper;
-import org.jeecg.modules.system.mapper.SysPermissionDataRuleMapper;
-import org.jeecg.modules.system.service.ISysDepartPermissionService;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

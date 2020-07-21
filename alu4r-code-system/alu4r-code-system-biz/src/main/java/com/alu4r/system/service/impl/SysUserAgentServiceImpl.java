@@ -1,8 +1,8 @@
 package com.alu4r.system.service.impl;
 
-import org.jeecg.modules.system.entity.SysUserAgent;
-import org.jeecg.modules.system.mapper.SysUserAgentMapper;
-import org.jeecg.modules.system.service.ISysUserAgentService;
+import com.alu4r.system.mapper.SysUserAgentMapper;
+import com.alu4r.system.modules.system.entity.SysUserAgent;
+import com.alu4r.system.service.ISysUserAgentService;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

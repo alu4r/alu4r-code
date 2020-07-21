@@ -6,27 +6,23 @@ import java.util.*;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.alu4r.common.core.constant.CacheConstant;
+import com.alu4r.common.core.constant.CommonConstant;
+import com.alu4r.common.core.system.query.QueryGenerator;
+import com.alu4r.common.core.system.vo.DictModel;
+import com.alu4r.common.core.system.vo.DictQuery;
+import com.alu4r.common.core.system.vo.LoginUser;
+import com.alu4r.common.core.util.ImportExcelUtil;
+import com.alu4r.common.core.util.SqlInjectionUtil;
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.system.modules.system.entity.SysDict;
+import com.alu4r.system.modules.system.entity.SysDictItem;
+import com.alu4r.system.modules.system.model.SysDictTree;
+import com.alu4r.system.modules.system.model.TreeSelectModel;
+import com.alu4r.system.modules.system.vo.SysDictPage;
+import com.alu4r.system.service.ISysDictItemService;
+import com.alu4r.system.service.ISysDictService;
 import org.apache.shiro.SecurityUtils;
-import org.jeecg.common.api.vo.Result;
-import org.jeecg.common.constant.CacheConstant;
-import org.jeecg.common.constant.CommonConstant;
-import org.jeecg.common.exception.JeecgBootException;
-import org.jeecg.common.system.query.QueryGenerator;
-import org.jeecg.common.system.vo.DictModel;
-import org.jeecg.common.system.vo.DictQuery;
-import org.jeecg.common.system.vo.LoginUser;
-import org.jeecg.common.util.ImportExcelUtil;
-import org.jeecg.common.util.RedisUtil;
-import org.jeecg.common.util.SqlInjectionUtil;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.shiro.vo.DefContants;
-import org.jeecg.modules.system.entity.SysDict;
-import org.jeecg.modules.system.entity.SysDictItem;
-import org.jeecg.modules.system.model.SysDictTree;
-import org.jeecg.modules.system.model.TreeSelectModel;
-import org.jeecg.modules.system.service.ISysDictItemService;
-import org.jeecg.modules.system.service.ISysDictService;
-import org.jeecg.modules.system.vo.SysDictPage;
 import org.jeecgframework.poi.excel.ExcelImportUtil;
 import org.jeecgframework.poi.excel.def.NormalExcelConstants;
 import org.jeecgframework.poi.excel.entity.ExportParams;
@@ -40,13 +36,13 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
-
+import com.alu4r.common.core.vo.Result;
 import com.alibaba.fastjson.JSON;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-
+import com.alu4r.common.core.vo.Result;
 import lombok.extern.slf4j.Slf4j;
 
 /**
@@ -70,8 +66,8 @@ public class SysDictController {
 	public RedisTemplate<String, Object> redisTemplate;
 
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public Result<IPage<SysDict>> queryPageList(SysDict sysDict,@RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
-									  @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,HttpServletRequest req) {
+	public Result<IPage<SysDict>> queryPageList(SysDict sysDict, @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
+                                                @RequestParam(name="pageSize", defaultValue="10") Integer pageSize, HttpServletRequest req) {
 		Result<IPage<SysDict>> result = new Result<IPage<SysDict>>();
 		QueryWrapper<SysDict> queryWrapper = QueryGenerator.initQueryWrapper(sysDict, req.getParameterMap());
 		Page<SysDict> page = new Page<SysDict>(pageNo, pageSize);
@@ -95,8 +91,8 @@ public class SysDictController {
 	 */
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/treeList", method = RequestMethod.GET)
-	public Result<List<SysDictTree>> treeList(SysDict sysDict,@RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
-									  @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,HttpServletRequest req) {
+	public Result<List<SysDictTree>> treeList(SysDict sysDict, @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
+                                              @RequestParam(name="pageSize", defaultValue="10") Integer pageSize, HttpServletRequest req) {
 		Result<List<SysDictTree>> result = new Result<>();
 		LambdaQueryWrapper<SysDict> query = new LambdaQueryWrapper<>();
 		// 构造查询条件
@@ -122,7 +118,7 @@ public class SysDictController {
 	 * @return
 	 */
 	@RequestMapping(value = "/getDictItems/{dictCode}", method = RequestMethod.GET)
-	public Result<List<DictModel>> getDictItems(@PathVariable String dictCode, @RequestParam(value = "sign",required = false) String sign,HttpServletRequest request) {
+	public Result<List<DictModel>> getDictItems(@PathVariable String dictCode, @RequestParam(value = "sign",required = false) String sign, HttpServletRequest request) {
 		log.info(" dictCode : "+ dictCode);
 		Result<List<DictModel>> result = new Result<List<DictModel>>();
 		List<DictModel> ls = null;
@@ -268,13 +264,13 @@ public class SysDictController {
 	 */
 	@SuppressWarnings("unchecked")
 	@RequestMapping(value = "/loadTreeData", method = RequestMethod.GET)
-	public Result<List<TreeSelectModel>> loadTreeData(@RequestParam(name="pid") String pid,@RequestParam(name="pidField") String pidField,
-												  @RequestParam(name="tableName") String tbname,
-												  @RequestParam(name="text") String text,
-												  @RequestParam(name="code") String code,
-												  @RequestParam(name="hasChildField") String hasChildField,
-												  @RequestParam(name="condition") String condition,
-												  @RequestParam(value = "sign",required = false) String sign,HttpServletRequest request) {
+	public Result<List<TreeSelectModel>> loadTreeData(@RequestParam(name="pid") String pid, @RequestParam(name="pidField") String pidField,
+                                                      @RequestParam(name="tableName") String tbname,
+                                                      @RequestParam(name="text") String text,
+                                                      @RequestParam(name="code") String code,
+                                                      @RequestParam(name="hasChildField") String hasChildField,
+                                                      @RequestParam(name="condition") String condition,
+                                                      @RequestParam(value = "sign",required = false) String sign, HttpServletRequest request) {
 		Result<List<TreeSelectModel>> result = new Result<List<TreeSelectModel>>();
 		Map<String, String> query = null;
 		if(oConvertUtils.isNotEmpty(condition)) {
@@ -297,9 +293,9 @@ public class SysDictController {
 	 */
 	@GetMapping("/queryTableData")
 	public Result<List<DictModel>> queryTableData(DictQuery query,
-												  @RequestParam(name = "pageNo", defaultValue = "1") Integer pageNo,
-												  @RequestParam(name = "pageSize", defaultValue = "10") Integer pageSize,
-												  @RequestParam(value = "sign",required = false) String sign,HttpServletRequest request){
+                                                  @RequestParam(name = "pageNo", defaultValue = "1") Integer pageNo,
+                                                  @RequestParam(name = "pageSize", defaultValue = "10") Integer pageSize,
+                                                  @RequestParam(value = "sign",required = false) String sign, HttpServletRequest request){
 		Result<List<DictModel>> res = new Result<List<DictModel>>();
 		// SQL注入漏洞 sign签名校验
 		String dictCode = query.getTable()+","+query.getText()+","+query.getCode();
@@ -359,7 +355,7 @@ public class SysDictController {
 	 */
 	//@RequiresRoles({"admin"})
 	@RequestMapping(value = "/delete", method = RequestMethod.DELETE)
-	@CacheEvict(value=CacheConstant.SYS_DICT_CACHE, allEntries=true)
+	@CacheEvict(value= CacheConstant.SYS_DICT_CACHE, allEntries=true)
 	public Result<SysDict> delete(@RequestParam(name="id",required=true) String id) {
 		Result<SysDict> result = new Result<SysDict>();
 		boolean ok = sysDictService.removeById(id);

@@ -3,11 +3,10 @@ package com.alu4r.system.service;
 
 import java.util.List;
 
-import org.jeecg.modules.system.entity.SysUser;
-import org.jeecg.modules.system.entity.SysUserDepart;
-import org.jeecg.modules.system.model.DepartIdModel;
 
-
+import com.alu4r.system.modules.system.entity.SysUser;
+import com.alu4r.system.modules.system.entity.SysUserDepart;
+import com.alu4r.system.modules.system.model.DepartIdModel;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

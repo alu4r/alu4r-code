@@ -2,8 +2,8 @@ package com.alu4r.system.service;
 
 import java.util.List;
 
-import org.jeecg.modules.system.entity.SysPermissionDataRule;
 
+import com.alu4r.system.modules.system.entity.SysPermissionDataRule;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

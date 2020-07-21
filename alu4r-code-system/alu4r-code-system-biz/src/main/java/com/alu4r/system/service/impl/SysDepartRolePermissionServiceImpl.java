@@ -1,10 +1,10 @@
 package com.alu4r.system.service.impl;
 
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.system.mapper.SysDepartRolePermissionMapper;
+import com.alu4r.system.modules.system.entity.SysDepartRolePermission;
+import com.alu4r.system.service.ISysDepartRolePermissionService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysDepartRolePermission;
-import org.jeecg.modules.system.mapper.SysDepartRolePermissionMapper;
-import org.jeecg.modules.system.service.ISysDepartRolePermissionService;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

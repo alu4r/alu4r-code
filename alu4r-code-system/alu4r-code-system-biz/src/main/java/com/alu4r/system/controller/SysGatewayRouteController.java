@@ -3,17 +3,17 @@ package com.alu4r.system.controller;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.alu4r.common.core.system.base.controller.JeecgController;
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.common.core.vo.Result;
+import com.alu4r.system.modules.system.entity.SysGatewayRoute;
+import com.alu4r.system.service.ISysGatewayRouteService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
-import org.jeecg.common.api.vo.Result;
-import org.jeecg.common.system.base.controller.JeecgController;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysGatewayRoute;
-import org.jeecg.modules.system.service.ISysGatewayRouteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-
+import com.alu4r.common.core.vo.Result;
 import java.util.List;
 
 /**

@@ -2,10 +2,10 @@ package com.alu4r.system.service;
 
 import java.util.List;
 
-import org.jeecg.common.exception.JeecgBootException;
-import org.jeecg.modules.system.entity.SysPermission;
-import org.jeecg.modules.system.model.TreeModel;
 
+import com.alu4r.common.core.exception.JeecgBootException;
+import com.alu4r.system.modules.system.entity.SysPermission;
+import com.alu4r.system.modules.system.model.TreeModel;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

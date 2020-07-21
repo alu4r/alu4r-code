@@ -1,21 +1,19 @@
 package com.alu4r.system.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.alu4r.common.core.annotation.AutoLog;
+import com.alu4r.common.core.constant.CommonConstant;
+import com.alu4r.common.core.system.query.QueryGenerator;
+import com.alu4r.common.core.util.ImportExcelUtil;
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.system.modules.system.entity.SysPosition;
+import com.alu4r.system.service.ISysPositionService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
-import org.jeecg.common.api.vo.Result;
-import org.jeecg.common.aspect.annotation.AutoLog;
-import org.jeecg.common.constant.CommonConstant;
-import org.jeecg.common.system.query.QueryGenerator;
-import org.jeecg.common.util.ImportExcelUtil;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.quartz.service.IQuartzJobService;
-import org.jeecg.modules.system.entity.SysPosition;
-import org.jeecg.modules.system.service.ISysPositionService;
 import org.jeecgframework.poi.excel.ExcelImportUtil;
 import org.jeecgframework.poi.excel.def.NormalExcelConstants;
 import org.jeecgframework.poi.excel.entity.ExportParams;
@@ -26,7 +24,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
-
+import com.alu4r.common.core.vo.Result;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -237,7 +235,7 @@ public class SysPositionController {
             params.setNeedSave(true);
             try {
                 List<Object>  listSysPositions = ExcelImportUtil.importExcel(file.getInputStream(), SysPosition.class, params);
-                List<String> list = ImportExcelUtil.importDateSave(listSysPositions, ISysPositionService.class, errorMessage,CommonConstant.SQL_INDEX_UNIQ_CODE);
+                List<String> list = ImportExcelUtil.importDateSave(listSysPositions, ISysPositionService.class, errorMessage, CommonConstant.SQL_INDEX_UNIQ_CODE);
                 errorLines+=list.size();
                 successLines+=(listSysPositions.size()-errorLines);
             } catch (Exception e) {

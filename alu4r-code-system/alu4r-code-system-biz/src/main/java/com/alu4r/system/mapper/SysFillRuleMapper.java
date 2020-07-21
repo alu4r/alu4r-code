@@ -1,7 +1,7 @@
 package com.alu4r.system.mapper;
 
+import com.alu4r.system.modules.system.entity.SysFillRule;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import org.jeecg.modules.system.entity.SysFillRule;
 
 /**
  * @Description: 填值规则

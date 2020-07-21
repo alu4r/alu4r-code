@@ -4,8 +4,8 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
+import com.alu4r.system.modules.system.entity.SysLog;
 import org.apache.ibatis.annotations.Param;
-import org.jeecg.modules.system.entity.SysLog;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 

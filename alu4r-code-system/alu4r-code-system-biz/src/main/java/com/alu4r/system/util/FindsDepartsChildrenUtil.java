@@ -1,11 +1,10 @@
 package com.alu4r.system.util;
 
-import org.jeecg.common.constant.CommonConstant;
-import org.jeecg.common.util.RedisUtil;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysDepart;
-import org.jeecg.modules.system.model.DepartIdModel;
-import org.jeecg.modules.system.model.SysDepartTreeModel;
+
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.system.modules.system.entity.SysDepart;
+import com.alu4r.system.modules.system.model.DepartIdModel;
+import com.alu4r.system.modules.system.model.SysDepartTreeModel;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -8,13 +8,12 @@ import java.util.Map;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.alu4r.common.core.system.query.QueryGenerator;
+import com.alu4r.common.core.system.vo.LoginUser;
+import com.alu4r.common.core.vo.Result;
+import com.alu4r.system.modules.system.entity.SysUserAgent;
+import com.alu4r.system.service.ISysUserAgentService;
 import org.apache.shiro.SecurityUtils;
-import org.jeecg.common.api.vo.Result;
-import org.jeecg.common.system.query.QueryGenerator;
-import org.jeecg.common.system.vo.LoginUser;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysUserAgent;
-import org.jeecg.modules.system.service.ISysUserAgentService;
 import org.jeecgframework.poi.excel.ExcelImportUtil;
 import org.jeecgframework.poi.excel.def.NormalExcelConstants;
 import org.jeecgframework.poi.excel.entity.ExportParams;
@@ -69,9 +68,9 @@ public class SysUserAgentController {
 	 */
 	@GetMapping(value = "/list")
 	public Result<IPage<SysUserAgent>> queryPageList(SysUserAgent sysUserAgent,
-									  @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
-									  @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,
-									  HttpServletRequest req) {
+                                                     @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
+                                                     @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,
+                                                     HttpServletRequest req) {
 		Result<IPage<SysUserAgent>> result = new Result<IPage<SysUserAgent>>();
 		QueryWrapper<SysUserAgent> queryWrapper = QueryGenerator.initQueryWrapper(sysUserAgent, req.getParameterMap());
 		Page<SysUserAgent> page = new Page<SysUserAgent>(pageNo, pageSize);

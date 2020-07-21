@@ -6,12 +6,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import org.jeecg.common.constant.CacheConstant;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysRolePermission;
-import org.jeecg.modules.system.mapper.SysRolePermissionMapper;
-import org.jeecg.modules.system.service.ISysRolePermissionService;
 
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.system.mapper.SysRolePermissionMapper;
+import com.alu4r.system.modules.system.entity.SysRolePermission;
+import com.alu4r.system.service.ISysRolePermissionService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

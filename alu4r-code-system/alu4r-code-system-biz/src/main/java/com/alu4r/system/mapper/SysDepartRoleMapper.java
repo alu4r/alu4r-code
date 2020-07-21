@@ -2,8 +2,8 @@ package com.alu4r.system.mapper;
 
 import java.util.List;
 
+import com.alu4r.system.modules.system.entity.SysDepartRole;
 import org.apache.ibatis.annotations.Param;
-import org.jeecg.modules.system.entity.SysDepartRole;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

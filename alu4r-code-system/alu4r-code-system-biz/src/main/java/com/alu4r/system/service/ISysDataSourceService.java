@@ -1,7 +1,7 @@
 package com.alu4r.system.service;
 
+import com.alu4r.system.modules.system.entity.SysDataSource;
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.jeecg.modules.system.entity.SysDataSource;
 
 /**
  * @Description: 多数据源管理

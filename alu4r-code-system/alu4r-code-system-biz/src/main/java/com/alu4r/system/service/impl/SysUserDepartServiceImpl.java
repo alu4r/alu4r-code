@@ -4,15 +4,15 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysDepart;
-import org.jeecg.modules.system.entity.SysUser;
-import org.jeecg.modules.system.entity.SysUserDepart;
-import org.jeecg.modules.system.mapper.SysUserDepartMapper;
-import org.jeecg.modules.system.model.DepartIdModel;
-import org.jeecg.modules.system.service.ISysDepartService;
-import org.jeecg.modules.system.service.ISysUserDepartService;
-import org.jeecg.modules.system.service.ISysUserService;
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.system.mapper.SysUserDepartMapper;
+import com.alu4r.system.modules.system.entity.SysDepart;
+import com.alu4r.system.modules.system.entity.SysUser;
+import com.alu4r.system.modules.system.entity.SysUserDepart;
+import com.alu4r.system.modules.system.model.DepartIdModel;
+import com.alu4r.system.service.ISysDepartService;
+import com.alu4r.system.service.ISysUserDepartService;
+import com.alu4r.system.service.ISysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
 package com.alu4r.system.mapper;
 
-import org.jeecg.modules.system.entity.SysUserAgent;
+import com.alu4r.system.modules.system.entity.SysUserAgent;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

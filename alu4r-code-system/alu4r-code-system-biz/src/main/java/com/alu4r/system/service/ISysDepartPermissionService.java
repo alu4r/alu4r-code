@@ -1,8 +1,8 @@
 package com.alu4r.system.service;
 
-import org.jeecg.modules.system.entity.SysDepartPermission;
+import com.alu4r.system.modules.system.entity.SysDepartPermission;
+import com.alu4r.system.modules.system.entity.SysPermissionDataRule;
 import com.baomidou.mybatisplus.extension.service.IService;
-import org.jeecg.modules.system.entity.SysPermissionDataRule;
 
 import java.util.List;
 
@@ -26,5 +26,5 @@ public interface ISysDepartPermissionService extends IService<SysDepartPermissio
      * @param permissionId
      * @return
      */
-    List<SysPermissionDataRule> getPermRuleListByDeptIdAndPermId(String departId,String permissionId);
+    List<SysPermissionDataRule> getPermRuleListByDeptIdAndPermId(String departId, String permissionId);
 }

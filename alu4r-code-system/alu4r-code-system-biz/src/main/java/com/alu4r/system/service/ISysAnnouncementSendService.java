@@ -1,12 +1,11 @@
 package com.alu4r.system.service;
 
-import java.util.List;
-
-import org.jeecg.modules.system.entity.SysAnnouncementSend;
-import org.jeecg.modules.system.model.AnnouncementSendModel;
-
+import com.alu4r.system.modules.system.entity.SysAnnouncementSend;
+import com.alu4r.system.modules.system.model.AnnouncementSendModel;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
+
+import java.util.List;
 
 /**
  * @Description: 用户通告阅读标记表
@@ -23,6 +22,6 @@ public interface ISysAnnouncementSendService extends IService<SysAnnouncementSen
 	 * @param announcementSendModel
 	 * @return
 	 */
-	public Page<AnnouncementSendModel> getMyAnnouncementSendPage(Page<AnnouncementSendModel> page,AnnouncementSendModel announcementSendModel);
+	public Page<AnnouncementSendModel> getMyAnnouncementSendPage(Page<AnnouncementSendModel> page, AnnouncementSendModel announcementSendModel);
 
 }

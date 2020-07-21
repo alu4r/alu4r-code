@@ -1,19 +1,19 @@
 package com.alu4r.system.service.impl;
 
+import com.alu4r.common.core.constant.CacheConstant;
+import com.alu4r.common.core.constant.CommonConstant;
+import com.alu4r.common.core.system.vo.DictModel;
+import com.alu4r.common.core.system.vo.DictQuery;
+import com.alu4r.system.mapper.SysDictItemMapper;
+import com.alu4r.system.mapper.SysDictMapper;
+import com.alu4r.system.modules.system.entity.SysDict;
+import com.alu4r.system.modules.system.entity.SysDictItem;
+import com.alu4r.system.modules.system.model.TreeSelectModel;
+import com.alu4r.system.service.ISysDictService;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import lombok.extern.slf4j.Slf4j;
-import org.jeecg.common.constant.CacheConstant;
-import org.jeecg.common.constant.CommonConstant;
-import org.jeecg.common.system.vo.DictModel;
-import org.jeecg.common.system.vo.DictQuery;
-import org.jeecg.modules.system.entity.SysDict;
-import org.jeecg.modules.system.entity.SysDictItem;
-import org.jeecg.modules.system.mapper.SysDictItemMapper;
-import org.jeecg.modules.system.mapper.SysDictMapper;
-import org.jeecg.modules.system.model.TreeSelectModel;
-import org.jeecg.modules.system.service.ISysDictService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -197,7 +197,7 @@ public class SysDictServiceImpl extends ServiceImpl<SysDictMapper, SysDict> impl
 	}
 
 	@Override
-	public List<TreeSelectModel> queryTreeList(Map<String, String> query,String table, String text, String code, String pidField,String pid,String hasChildField) {
+	public List<TreeSelectModel> queryTreeList(Map<String, String> query, String table, String text, String code, String pidField, String pid, String hasChildField) {
 		return baseMapper.queryTreeList(query,table, text, code, pidField, pid,hasChildField);
 	}
 

@@ -5,6 +5,25 @@ import cn.hutool.core.util.RandomUtil;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
+import com.alu4r.common.core.annotation.PermissionData;
+import com.alu4r.common.core.constant.CommonConstant;
+import com.alu4r.common.core.system.api.ISysBaseAPI;
+import com.alu4r.common.core.system.query.QueryGenerator;
+import com.alu4r.common.core.system.util.JwtUtil;
+import com.alu4r.common.core.system.vo.LoginUser;
+import com.alu4r.common.core.system.vo.SysUserCacheInfo;
+import com.alu4r.common.core.util.PasswordUtil;
+import com.alu4r.common.core.util.PmsUtil;
+import com.alu4r.common.core.util.RedisUtil;
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.common.core.vo.Result;
+import com.alu4r.system.modules.system.aspect.UrlMatchEnum;
+import com.alu4r.system.modules.system.entity.*;
+import com.alu4r.system.modules.system.model.DepartIdModel;
+import com.alu4r.system.modules.system.model.SysUserSysDepartModel;
+import com.alu4r.system.modules.system.vo.SysDepartUsersVO;
+import com.alu4r.system.modules.system.vo.SysUserRoleVO;
+import com.alu4r.system.service.*;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
@@ -13,25 +32,6 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.SecurityUtils;
-import org.jeecg.common.api.vo.Result;
-import org.jeecg.common.aspect.annotation.PermissionData;
-import org.jeecg.common.constant.CommonConstant;
-import org.jeecg.common.system.api.ISysBaseAPI;
-import org.jeecg.common.system.query.QueryGenerator;
-import org.jeecg.common.system.util.JwtUtil;
-import org.jeecg.common.system.vo.LoginUser;
-import org.jeecg.common.system.vo.SysUserCacheInfo;
-import org.jeecg.common.util.PasswordUtil;
-import org.jeecg.common.util.PmsUtil;
-import org.jeecg.common.util.RedisUtil;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.aspect.UrlMatchEnum;
-import org.jeecg.modules.system.entity.*;
-import org.jeecg.modules.system.model.DepartIdModel;
-import org.jeecg.modules.system.model.SysUserSysDepartModel;
-import org.jeecg.modules.system.service.*;
-import org.jeecg.modules.system.vo.SysDepartUsersVO;
-import org.jeecg.modules.system.vo.SysUserRoleVO;
 import org.jeecgframework.poi.excel.ExcelImportUtil;
 import org.jeecgframework.poi.excel.def.NormalExcelConstants;
 import org.jeecgframework.poi.excel.entity.ExportParams;
@@ -113,8 +113,8 @@ public class SysUserController {
      */
     @PermissionData(pageComponent = "system/UserList")
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public Result<IPage<SysUser>> queryPageList(SysUser user,@RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
-									  @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,HttpServletRequest req) {
+	public Result<IPage<SysUser>> queryPageList(SysUser user, @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
+                                                @RequestParam(name="pageSize", defaultValue="10") Integer pageSize, HttpServletRequest req) {
 		Result<IPage<SysUser>> result = new Result<IPage<SysUser>>();
 		QueryWrapper<SysUser> queryWrapper = QueryGenerator.initQueryWrapper(user, req.getParameterMap());
     	//TODO 外部模拟登陆临时账号，列表不显示

@@ -1,7 +1,7 @@
 package com.alu4r.system.mapper;
 
+import com.alu4r.system.modules.system.entity.SysDataLog;
 import org.apache.ibatis.annotations.Param;
-import org.jeecg.modules.system.entity.SysDataLog;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 

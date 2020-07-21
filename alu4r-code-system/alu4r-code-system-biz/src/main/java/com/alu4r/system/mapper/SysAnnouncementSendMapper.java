@@ -2,9 +2,9 @@ package com.alu4r.system.mapper;
 
 import java.util.List;
 
+import com.alu4r.system.modules.system.entity.SysAnnouncementSend;
+import com.alu4r.system.modules.system.model.AnnouncementSendModel;
 import org.apache.ibatis.annotations.Param;
-import org.jeecg.modules.system.entity.SysAnnouncementSend;
-import org.jeecg.modules.system.model.AnnouncementSendModel;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -26,6 +26,6 @@ public interface SysAnnouncementSendMapper extends BaseMapper<SysAnnouncementSen
 	 * @param pageNo 
 	 * @return
 	 */
-	public List<AnnouncementSendModel> getMyAnnouncementSendList(Page<AnnouncementSendModel> page,@Param("announcementSendModel") AnnouncementSendModel announcementSendModel);
+	public List<AnnouncementSendModel> getMyAnnouncementSendList(Page<AnnouncementSendModel> page, @Param("announcementSendModel") AnnouncementSendModel announcementSendModel);
 
 }

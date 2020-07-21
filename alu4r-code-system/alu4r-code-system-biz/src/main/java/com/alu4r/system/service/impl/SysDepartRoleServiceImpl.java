@@ -1,8 +1,8 @@
 package com.alu4r.system.service.impl;
 
-import org.jeecg.modules.system.entity.SysDepartRole;
-import org.jeecg.modules.system.mapper.SysDepartRoleMapper;
-import org.jeecg.modules.system.service.ISysDepartRoleService;
+import com.alu4r.system.mapper.SysDepartRoleMapper;
+import com.alu4r.system.modules.system.entity.SysDepartRole;
+import com.alu4r.system.service.ISysDepartRoleService;
 import org.springframework.stereotype.Service;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

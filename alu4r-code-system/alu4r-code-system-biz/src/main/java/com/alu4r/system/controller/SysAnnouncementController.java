@@ -11,21 +11,21 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import com.alu4r.common.core.constant.CommonConstant;
+import com.alu4r.common.core.constant.CommonSendStatus;
+import com.alu4r.common.core.constant.WebsocketConst;
+import com.alu4r.common.core.system.query.QueryGenerator;
+import com.alu4r.common.core.system.util.JwtUtil;
+import com.alu4r.common.core.system.vo.LoginUser;
+import com.alu4r.common.core.util.oConvertUtils;
+import com.alu4r.common.core.vo.Result;
+import com.alu4r.message.websocket.WebSocket;
+import com.alu4r.system.modules.system.entity.SysAnnouncement;
+import com.alu4r.system.modules.system.entity.SysAnnouncementSend;
+import com.alu4r.system.service.ISysAnnouncementSendService;
+import com.alu4r.system.service.ISysAnnouncementService;
 import org.apache.commons.lang.StringUtils;
 import org.apache.shiro.SecurityUtils;
-import org.jeecg.common.api.vo.Result;
-import org.jeecg.common.constant.CommonConstant;
-import org.jeecg.common.constant.CommonSendStatus;
-import org.jeecg.common.constant.WebsocketConst;
-import org.jeecg.common.system.query.QueryGenerator;
-import org.jeecg.common.system.util.JwtUtil;
-import org.jeecg.common.system.vo.LoginUser;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.message.websocket.WebSocket;
-import org.jeecg.modules.system.entity.SysAnnouncement;
-import org.jeecg.modules.system.entity.SysAnnouncementSend;
-import org.jeecg.modules.system.service.ISysAnnouncementSendService;
-import org.jeecg.modules.system.service.ISysAnnouncementService;
 
 import org.jeecgframework.poi.excel.ExcelImportUtil;
 import org.jeecgframework.poi.excel.def.NormalExcelConstants;
@@ -41,7 +41,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 import org.springframework.web.servlet.ModelAndView;
-
+import com.alu4r.common.core.vo.Result;
 import com.alibaba.fastjson.JSONObject;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -78,9 +78,9 @@ public class SysAnnouncementController {
 	 */
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
 	public Result<IPage<SysAnnouncement>> queryPageList(SysAnnouncement sysAnnouncement,
-									  @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
-									  @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,
-									  HttpServletRequest req) {
+                                                        @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
+                                                        @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,
+                                                        HttpServletRequest req) {
 		Result<IPage<SysAnnouncement>> result = new Result<IPage<SysAnnouncement>>();
 		sysAnnouncement.setDelFlag(CommonConstant.DEL_FLAG_0.toString());
 		QueryWrapper<SysAnnouncement> queryWrapper = new QueryWrapper<SysAnnouncement>(sysAnnouncement);

@@ -5,17 +5,15 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.jeecg.common.api.vo.Result;
-import org.jeecg.common.system.query.QueryGenerator;
-import org.jeecg.common.util.oConvertUtils;
-import org.jeecg.modules.system.entity.SysDataLog;
-import org.jeecg.modules.system.service.ISysDataLogService;
+import com.alu4r.common.core.system.query.QueryGenerator;
+import com.alu4r.system.modules.system.entity.SysDataLog;
+import com.alu4r.system.service.ISysDataLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
+import com.alu4r.common.core.vo.Result;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
@@ -30,8 +28,8 @@ public class SysDataLogController {
 	private ISysDataLogService service;
 	
 	@RequestMapping(value = "/list", method = RequestMethod.GET)
-	public Result<IPage<SysDataLog>> queryPageList(SysDataLog dataLog,@RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
-									  @RequestParam(name="pageSize", defaultValue="10") Integer pageSize,HttpServletRequest req) {
+	public Result<IPage<SysDataLog>> queryPageList(SysDataLog dataLog, @RequestParam(name="pageNo", defaultValue="1") Integer pageNo,
+                                                   @RequestParam(name="pageSize", defaultValue="10") Integer pageSize, HttpServletRequest req) {
 		Result<IPage<SysDataLog>> result = new Result<IPage<SysDataLog>>();
 		QueryWrapper<SysDataLog> queryWrapper = QueryGenerator.initQueryWrapper(dataLog, req.getParameterMap());
 		Page<SysDataLog> page = new Page<SysDataLog>(pageNo, pageSize);

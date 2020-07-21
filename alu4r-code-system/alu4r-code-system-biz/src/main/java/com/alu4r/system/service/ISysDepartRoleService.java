@@ -1,6 +1,6 @@
 package com.alu4r.system.service;
 
-import org.jeecg.modules.system.entity.SysDepartRole;
+import com.alu4r.system.modules.system.entity.SysDepartRole;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;

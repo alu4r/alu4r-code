@@ -1,7 +1,7 @@
 package com.alu4r.system.mapper;
 
+import com.alu4r.system.modules.system.entity.SysDictItem;
 import org.apache.ibatis.annotations.Select;
-import org.jeecg.modules.system.entity.SysDictItem;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 import java.util.List;

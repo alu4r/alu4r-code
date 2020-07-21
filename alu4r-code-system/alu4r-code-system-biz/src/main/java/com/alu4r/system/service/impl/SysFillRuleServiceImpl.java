@@ -1,9 +1,9 @@
 package com.alu4r.system.service.impl;
 
+import com.alu4r.system.mapper.SysFillRuleMapper;
+import com.alu4r.system.modules.system.entity.SysFillRule;
+import com.alu4r.system.service.ISysFillRuleService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import org.jeecg.modules.system.entity.SysFillRule;
-import org.jeecg.modules.system.mapper.SysFillRuleMapper;
-import org.jeecg.modules.system.service.ISysFillRuleService;
 import org.springframework.stereotype.Service;
 
 /**
