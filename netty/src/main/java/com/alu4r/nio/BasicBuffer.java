@@ -2,12 +2,6 @@ package com.alu4r.nio;
 
 import java.nio.IntBuffer;
 
-/**
- * @description:
- * @author: alu4r
- * @date: 2020/10/9 14:31
- *
- */
 public class BasicBuffer {
     public static void main(String[] args) {
 
