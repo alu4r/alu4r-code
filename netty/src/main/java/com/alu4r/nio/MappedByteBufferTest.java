@@ -4,9 +4,12 @@ import java.io.RandomAccessFile;
 import java.nio.MappedByteBuffer;
 import java.nio.channels.FileChannel;
 
-/*
-说明
-1. MappedByteBuffer 可让文件直接在内存(堆外内存)修改, 操作系统不需要拷贝一次
+/**
+ * 说明
+ * 1. MappedByteBuffer 可让文件直接在内存(堆外内存)修改, 操作系统不需要拷贝一次
+ *
+ * NIO 还提供了 MappedByteBuffer， 可以让文件直接在内存（堆外的内存）中进行修改，而如何同步到文件由NIO 来完成
+ *
  */
 public class MappedByteBufferTest {
     public static void main(String[] args) throws Exception {

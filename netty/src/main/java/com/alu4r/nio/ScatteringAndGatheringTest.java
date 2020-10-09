@@ -8,7 +8,9 @@ import java.util.Arrays;
 
 /**
  * Scattering：将数据写入到buffer时，可以采用buffer数组，依次写入  [分散]
- * Gathering: 从buffer读取数据时，可以采用buffer数组，依次读
+ * Gathering: * 前面我们讲的读写操作，都是通过一个Buffer 完成的，
+ * NIO 还支持 通过多个Buffer (即 Buffer 数组) 从buffer读取数据时，可以采用buffer数组，依次读
+ 完成读写操作，即 Scattering 和 Gathering
  */
 public class ScatteringAndGatheringTest {
     public static void main(String[] args) throws Exception {

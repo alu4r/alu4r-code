@@ -2,6 +2,10 @@ package com.alu4r.nio;
 
 import java.nio.ByteBuffer;
 
+/**
+ * 类型化读写
+ * ByteBuffer 支持类型化的put 和 get, put 放入的是什么数据类型，get就应该使用相应的数据类型来取出，否则可能有 BufferUnderflowException 异常
+ */
 public class NIOByteBufferPutGet {
     public static void main(String[] args) {
 

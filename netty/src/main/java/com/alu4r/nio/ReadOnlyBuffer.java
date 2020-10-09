@@ -2,6 +2,9 @@ package com.alu4r.nio;
 
 import java.nio.ByteBuffer;
 
+/**
+ * 可以将一个普通Buffer 转成只读Buffer
+ */
 public class ReadOnlyBuffer {
     public static void main(String[] args) {
 
