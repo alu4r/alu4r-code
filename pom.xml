@@ -20,6 +20,7 @@
         <module>alu4r-code-gateway</module>
         <module>alu4r-code-system</module>
         <module>alu4r-code-common</module>
+        <module>netty</module>
     </modules>
 
     <distributionManagement>
