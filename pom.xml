@@ -21,6 +21,7 @@
         <module>alu4r-code-system</module>
         <module>alu4r-code-common</module>
         <module>netty</module>
+        <module>leetcode</module>
     </modules>
 
     <distributionManagement>

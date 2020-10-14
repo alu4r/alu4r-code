@@ -2,6 +2,9 @@ package com.alu4r.nio;
 
 import java.nio.IntBuffer;
 
+/**
+ *
+ */
 public class BasicBuffer {
     public static void main(String[] args) {
 
@@ -33,6 +36,7 @@ public class BasicBuffer {
         intBuffer.position(1);//1,2
         System.out.println(intBuffer.get());
         intBuffer.limit(3);
+        //如果用剩余的就继续读
         while (intBuffer.hasRemaining()) {
             System.out.println(intBuffer.get());
         }

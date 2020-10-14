@@ -9,14 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>alu4r-code-common</artifactId>
-    <packaging>pom</packaging>
-    <modules>
-        <module>alu4r-code-common-cloud</module>
-        <module>alu4r-code-common-cloud-starter</module>
-        <module>alu4r-code-common-core</module>
-        <module>alu4r-code-common-log</module>
-    </modules>
+    <artifactId>leetcode</artifactId>
 
 
 </project>
