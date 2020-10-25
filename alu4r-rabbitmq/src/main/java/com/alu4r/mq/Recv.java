@@ -1,9 +1,8 @@
 package com.alu4r.mq;
 
-import com.rabbitmq.client.Channel;
-import com.rabbitmq.client.Connection;
-import com.rabbitmq.client.ConnectionFactory;
-import com.rabbitmq.client.DeliverCallback;
+import com.rabbitmq.client.*;
+
+import java.io.IOException;
 
 /**
  * @description:
@@ -23,20 +22,24 @@ public class Recv {
 
         Connection connection = factory.newConnection();
         Channel channel = connection.createChannel();
-
-
-        channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+        //一次值消费一个消息
+        channel.basicQos(1);
+        channel.queueDeclare(QUEUE_NAME, true, false, false, null);
         System.out.println(" [*] Waiting for messages. To exit press CTRL+C");
 
-        DeliverCallback deliverCallback = (consumerTag, delivery) -> {
-            String message = new String(delivery.getBody(), "UTF-8");
-            System.out.println(" [x] Received '" + message + "'");
-        };
         /**
          * 1.消费那个队列的信息
-         * 2.开始消息的自动确认机制
+         * 2.开始消息的自动确认机制.true 将会自动发送的消费端，弊端就是消费端正在处理这些消息但是突然宕机。就会消息丢失
          * 3.消费时的回调接口
          */
-        channel.basicConsume(QUEUE_NAME, true, deliverCallback, consumerTag -> { });
+        channel.basicConsume(QUEUE_NAME, false, new DefaultConsumer(channel){
+            @Override
+            public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
+                String message = new String(body, "UTF-8");
+                System.out.println(" [x] Received '" + message + "'");
+                //手动确认消息，false表示确认一个消息
+                channel.basicAck(envelope.getDeliveryTag(), false);
+            }
+        });
     }
 }

@@ -3,6 +3,7 @@ package com.alu4r.mq;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
+import com.rabbitmq.client.MessageProperties;
 
 import java.nio.charset.StandardCharsets;
 import java.util.Scanner;
@@ -29,12 +30,12 @@ public class Send {
             Channel channel = connection.createChannel();
             /**
              * 1.队列名称
-             * 2.定义是否持久化数据
+             * 2.定义是否持久化队列,MQ重启后还存在
              * 3.是否独占队列，只有这个连接能用
              * 4.是否完成后删除队列
              * 5.格外参数
              */
-            channel.queueDeclare(QUEUE_NAME, false, false, false, null);
+            channel.queueDeclare(QUEUE_NAME, true, false, false, null);
 
             while (true){
                 Scanner scanner = new Scanner(System.in);
@@ -43,15 +44,15 @@ public class Send {
                 /**
                  * 1.交换机
                  * 2.队列名称
-                 * 3.额外设置
+                 * 3.额外设置    MessageProperties.PERSISTENT_TEXT_PLAIN:消息持久化
                  * 4.消息的具体内容
                  */
-                channel.basicPublish("", QUEUE_NAME, null, message.getBytes(StandardCharsets.UTF_8));
+                channel.basicPublish("", QUEUE_NAME, MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes(StandardCharsets.UTF_8));
                 System.out.println(" [x] Sent '" + message + "'");
             }
-
         } catch (Exception e){
             e.printStackTrace();
         }
+
     }
 }
