@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestBody;
  * 日志Feign服务层
  * 
  * @author zmr
- * @date 2019-05-20
+ * @date 2020-10-15
  */
 @FeignClient(name = "service-log")
 public interface RemoteLogService

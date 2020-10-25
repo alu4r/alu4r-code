@@ -15,8 +15,7 @@ import java.io.IOException;
  * 
  * @author ruoyi
  */
-public class ServletUtils
-{
+public class ServletUtils {
     /**
      * 获取String参数
      */

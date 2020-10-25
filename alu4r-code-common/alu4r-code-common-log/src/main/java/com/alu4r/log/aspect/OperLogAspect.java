@@ -32,12 +32,12 @@ import java.util.stream.Collectors;
 @Aspect
 @Slf4j
 @Component
-public class OperLogAspect
-{
-    // 配置织入点
+public class OperLogAspect {
+    /**
+     * 配置织入点
+     */
     @Pointcut("@annotation(com.alu4r.log.annotation.OperLog)")
-    public void logPointCut()
-    {
+    public void logPointCut(){
     }
 
     /**
@@ -46,8 +46,7 @@ public class OperLogAspect
      * @param joinPoint 切点
      */
     @AfterReturning(pointcut = "logPointCut()")
-    public void doAfterReturning(JoinPoint joinPoint)
-    {
+    public void doAfterReturning(JoinPoint joinPoint){
         handleLog(joinPoint, null);
     }
 
@@ -58,19 +57,15 @@ public class OperLogAspect
      * @param e         异常
      */
     @AfterThrowing(value = "logPointCut()", throwing = "e")
-    public void doAfterThrowing(JoinPoint joinPoint, Exception e)
-    {
+    public void doAfterThrowing(JoinPoint joinPoint, Exception e){
         handleLog(joinPoint, e);
     }
 
-    protected void handleLog(final JoinPoint joinPoint, final Exception e)
-    {
-        try
-        {
+    protected void handleLog(final JoinPoint joinPoint, final Exception e){
+        try{
             // 获得注解
             OperLog controllerLog = getAnnotationLog(joinPoint);
-            if (controllerLog == null)
-            {
+            if (controllerLog == null){
                 return;
             }
             // *========数据库日志=========*//
@@ -84,8 +79,7 @@ public class OperLogAspect
             operLog.setOperLocation(AddressUtils.getRealAddressByIP(ip));
             String username = request.getHeader(Constants.CURRENT_USERNAME);
             operLog.setOperName(username);
-            if (e != null)
-            {
+            if (e != null){
                 operLog.setStatus(BusinessStatus.FAIL.ordinal());
                 operLog.setErrorMsg(StringUtils.substring(e.getMessage(), 0, 2000));
             }
@@ -93,7 +87,7 @@ public class OperLogAspect
             String className = joinPoint.getTarget().getClass().getName();
             String methodName = joinPoint.getSignature().getName();
             operLog.setMethod(className + "." + methodName + "()");
-         // 设置请求方式
+            // 设置请求方式
             operLog.setRequestMethod(request.getMethod());
             // 处理设置注解上的参数
             Object[] args = joinPoint.getArgs();
