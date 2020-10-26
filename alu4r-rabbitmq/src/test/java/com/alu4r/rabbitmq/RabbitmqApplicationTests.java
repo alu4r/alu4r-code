@@ -1,8 +1,6 @@
 package com.alu4r.rabbitmq;
 
 import com.alu4r.rabbitmq.constants.RabbitConsts;
-import com.alu4r.rabbitmq.message.MessageStruct;
-import jdk.internal.org.objectweb.asm.Handle;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
