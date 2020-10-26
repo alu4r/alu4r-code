@@ -1,0 +1,11 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /rabbitmq
+spring:
+  rabbitmq:
+    host: 47.100.58.237
+    port: 5672
+    username: alu4r
+    password: rabbitmq//4142
+    virtual-host: RabbitMQ_VH
