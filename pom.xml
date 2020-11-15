@@ -22,7 +22,6 @@
         <module>alu4r-code-common</module>
         <module>netty</module>
         <module>leetcode</module>
-        <module>alu4r-rabbitmq</module>
     </modules>
 
     <distributionManagement>
