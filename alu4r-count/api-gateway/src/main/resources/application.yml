@@ -28,7 +28,7 @@ spring:
 
 eureka:
   instance:
-    hostname: cloud-gateway-service
+    hostname: eureka
   client:
     fetch-registry: true
     register-with-eureka: true
