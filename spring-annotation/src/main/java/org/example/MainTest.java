@@ -12,6 +12,7 @@ public class MainTest {
         ApplicationContext applicationContext = new AnnotationConfigApplicationContext(MainConfig.class);
         Person bean = applicationContext.getBean(Person.class);
         System.out.println(bean);
+        //获取ioc容器中bean的名字
         String[] namesForType = applicationContext.getBeanNamesForType(Person.class);
         for (String name : namesForType) {
             System.out.println(name);
