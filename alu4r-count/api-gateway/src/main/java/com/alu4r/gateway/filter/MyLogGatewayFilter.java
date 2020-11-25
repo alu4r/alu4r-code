@@ -12,6 +12,7 @@ import reactor.core.publisher.Mono;
 import java.util.Date;
 
 /**
+ * 过滤器
  * @Author EiletXie
  * @Since 2020/3/12 16:23
  */
@@ -19,9 +20,8 @@ import java.util.Date;
 @Slf4j
 public class MyLogGatewayFilter implements GlobalFilter, Ordered {
 
-
     @Override
-    public Mono< Void > filter(ServerWebExchange exchange, GatewayFilterChain chain) {
+    public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         log.info("****** come in MyLogGateWayFilter: " + new Date());
 
         String uname = exchange.getRequest().getQueryParams().getFirst("uname");
