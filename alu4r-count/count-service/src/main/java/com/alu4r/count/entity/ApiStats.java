@@ -20,6 +20,10 @@ public class ApiStats extends Model<ApiStats> {
     //调用次数，一条记录表示调用一次，一遍此项为1
     private Integer count;
 
+    public ApiStats(String id){
+        this.timeStamp = new Date();
+        this.count = 1;
+    }
 
     public String getId() {
         return id;
