@@ -1,6 +1,6 @@
 server:
   port: 7004
-
+  conterxt-path: /query
 spring:
   application:
     name: query-service
