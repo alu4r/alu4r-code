@@ -3,6 +3,6 @@
 <mapper namespace="com.alu4r.query.mapper.QueryMapper">
 
     <select id="getViewsCount" resultType="java.lang.Integer">
-        SELECT COUNT(count) FROM api_stats WHERE id = #{apiId}
+        SELECT COUNT(count) FROM api_stats WHERE id = #{apiId} AND  #{startTime} &#60;&#61; time_stamp AND time_stamp &#60; #{endTime}
     </select>
 </mapper>

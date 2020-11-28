@@ -3,6 +3,7 @@ package com.alu4r.query.controller;
 import com.alu4r.query.service.QueryService;
 import com.baomidou.mybatisplus.extension.api.R;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,8 +23,8 @@ public class QueryController {
     QueryService queryService;
 
     @GetMapping("/test")
-    public String test(){
-        return "查询测试成功！";
+    public R test(){
+        return R.ok(new Date());
     }
 
     /**

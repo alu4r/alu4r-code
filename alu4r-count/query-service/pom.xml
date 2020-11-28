@@ -12,6 +12,11 @@
     <artifactId>query-service</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>5.4.1</version>
+        </dependency>
         <!-- mysql驱动 -->
         <dependency>
             <groupId>mysql</groupId>

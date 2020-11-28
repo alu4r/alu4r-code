@@ -6,6 +6,14 @@ server:
 spring:
   application:
     name: query-service
+  #设置请求格式化时间
+  mvc:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  #设置返回格式化时间
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
 
   datasource:
     druid:

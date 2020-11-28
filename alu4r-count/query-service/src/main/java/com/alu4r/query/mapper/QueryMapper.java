@@ -20,5 +20,5 @@ public interface QueryMapper {
      * @param endTime 结束时间
      * @return
      */
-    Integer getViewsCount(@Param("apiId") String apiId, Date startTime, Date endTime);
+    Integer getViewsCount(@Param("apiId") String apiId, @Param("startTime")Date startTime, @Param("endTime")Date endTime);
 }

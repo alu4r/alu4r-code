@@ -21,6 +21,7 @@ public class ApiStats extends Model<ApiStats> {
     private Integer count;
 
     public ApiStats(String id){
+        this.id = id;
         this.timeStamp = new Date();
         this.count = 1;
     }
