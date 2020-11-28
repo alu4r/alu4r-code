@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @date: 2020/11/26 20:57
  */
 @RestController
+@RequestMapping("count")
 public class CountController extends ApiController {
 
     @Autowired

@@ -13,11 +13,12 @@ import java.util.Date;
  * @date: 2020/11/28 15:31
  */
 @RestController
-@RequestMapping("/query")
+@RequestMapping("test")
 public class TestController {
 
-    @GetMapping("/test")
-    public R test(){
-        return R.ok(new Date());
+    @RequestMapping("signal")
+    public R signal(){
+        return R.ok("成功发送信号！");
     }
+
 }

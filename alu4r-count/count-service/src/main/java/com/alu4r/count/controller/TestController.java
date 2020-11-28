@@ -12,11 +12,16 @@ import org.springframework.web.bind.annotation.RestController;
  * @date: 2020/11/28 15:08
  */
 @RestController
-@RequestMapping("/test")
+@RequestMapping("test")
 public class TestController {
 
     @Autowired
     RedisTemplate redisTemplate;
+
+    @RequestMapping("signal")
+    public R signal(){
+        return R.ok("成功发送信号！");
+    }
 
     @RequestMapping("redis")
     public R redisTest(){

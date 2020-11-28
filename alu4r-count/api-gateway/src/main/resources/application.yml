@@ -1,5 +1,7 @@
 server:
   port: 7002
+  servlet:
+    context-path: /api
 
 spring:
   application:
@@ -13,20 +15,27 @@ spring:
         - id: count-service # 路由的id,没有规定规则但要求唯一,建议配合服务名
           uri: lb://count-service
           predicates:
-            - Path=/count/** # 断言，路径相匹配的进行路由
+            - Path=/api/count-service/** # 断言，路径相匹配的进行路由
+          filters:
+            - StripPrefix=1
 
         - id: query-service
           uri: lb://query-service
-#          uri: http://127.0.0.1:7004
           predicates:
-            - Path=/query/**
-          #去掉/auth后再转发请求到相应的服务
-#          filters:
-#            - StripPrefix=1
+            - Path=/api/query-service/**
+          #去掉/api后再转发请求到相应的服务
+          filters:
+            - StripPrefix=1
 
 eureka:
   instance:
-    hostname: eureka
+    instance-id: api-gateway
+    #访问路径可以显示IP地址
+    prefer-ip-address: true
+    #Eureka客户端向服务端发送心跳的时间间隔.单位为秒(默认30 秒)
+    lease-renewal-interval-in-seconds: 1
+    #Eureka服务端在收到最后一次心跳等待时间上限.单位为秒(默认90 秒),超时将剔除服务
+    lease-expiration-duration-in-seconds: 2
   client:
     fetch-registry: true
     register-with-eureka: true

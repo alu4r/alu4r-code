@@ -16,7 +16,7 @@ import java.util.Date;
  * @date: 2020/11/19 23:06
  */
 @RestController
-@RequestMapping("/query")
+@RequestMapping("query")
 public class QueryController {
 
     @Autowired
