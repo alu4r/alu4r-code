@@ -20,6 +20,9 @@ spring:
 #          uri: http://127.0.0.1:7004
           predicates:
             - Path=/query/**
+          #去掉/auth后再转发请求到相应的服务
+#          filters:
+#            - StripPrefix=1
 
 eureka:
   instance:
