@@ -1,6 +1,7 @@
 package com.alu4r.query.mapper;
 
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.Date;
 
@@ -19,5 +20,5 @@ public interface QueryMapper {
      * @param endTime 结束时间
      * @return
      */
-    Integer getViewsCount(String apiId, Date startTime, Date endTime);
+    Integer getViewsCount(@Param("apiId") String apiId, Date startTime, Date endTime);
 }

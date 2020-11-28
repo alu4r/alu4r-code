@@ -3,6 +3,7 @@ package com.alu4r.query.service.impl;
 import com.alu4r.query.mapper.QueryMapper;
 import com.alu4r.query.service.QueryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.Date;
 
@@ -11,6 +12,7 @@ import java.util.Date;
  * @author: alu4r
  * @date: 2020/11/28 12:45
  */
+@Service
 public class QueryServiceImpl implements QueryService {
 
     @Autowired
