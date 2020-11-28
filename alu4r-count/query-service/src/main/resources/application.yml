@@ -1,7 +1,7 @@
 server:
   port: 7004
-#  servlet:
-#    contextPath: /query
+  servlet:
+    contextPath: /query-service
 
 spring:
   application:
@@ -14,6 +14,11 @@ spring:
   jackson:
     date-format: yyyy-MM-dd HH:mm:ss
     time-zone: GMT+8
+
+  redis:
+    host: 47.100.58.237
+    port: 6379
+    password: redis//4142
 
   datasource:
     druid:

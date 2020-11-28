@@ -1,15 +1,23 @@
 server:
   port: 7003
   servlet:
-    contextPath: /count
+    contextPath: /count-service
 
 spring:
   application:
     name: count-service
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
-
+    #设置请求格式化时间
+    mvc:
+      date-format: yyyy-MM-dd HH:mm:ss
+      time-zone: GMT+8
+    #设置返回格式化时间
+    jackson:
+      date-format: yyyy-MM-dd HH:mm:ss
+      time-zone: GMT+8
+  redis:
+    host: 47.100.58.237
+    port: 6379
+    password: redis//4142
 
   datasource:
     druid:

@@ -22,10 +22,6 @@ public class QueryController {
     @Autowired
     QueryService queryService;
 
-    @GetMapping("/test")
-    public R test(){
-        return R.ok(new Date());
-    }
 
     /**
      * 根据id和时间段查询统计的数量
