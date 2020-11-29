@@ -31,7 +31,7 @@ public class LoginController {
      * @param userInfo 查询实体
      * @return 所有数据
      */
-    @PostMapping
+    @PostMapping("public")
     public R login(UserInfo userInfo) {
         QueryWrapper<UserInfo> queryWrapper = new QueryWrapper();
         queryWrapper.eq("user_name",userInfo.getUserName())

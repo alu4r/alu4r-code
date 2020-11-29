@@ -34,6 +34,10 @@ public class MyLogGatewayFilter implements GlobalFilter, Ordered {
 //          exchange.getResponse().setStatusCode(HttpStatus.NOT_ACCEPTABLE);
 //          return exchange.getResponse().setComplete();
 //        }
+        String url = exchange.getRequest().getURI().getPath();
+        if(url.contains("public")){
+            return chain.filter(exchange);
+        }
         List<String> authorization = exchange.getRequest().getHeaders().get("Authorization");
         String token = authorization.get(0);
         if(token == null){
