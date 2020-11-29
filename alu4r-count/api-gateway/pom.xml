@@ -12,6 +12,11 @@
     <artifactId>api-gateway</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>com.auth0</groupId>
+            <artifactId>java-jwt</artifactId>
+            <version>3.11.0</version>
+        </dependency>
         <!--gateway-->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
@@ -22,7 +27,11 @@
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
