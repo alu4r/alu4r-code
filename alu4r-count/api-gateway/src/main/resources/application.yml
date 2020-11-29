@@ -27,6 +27,14 @@ spring:
           filters:
             - StripPrefix=1
 
+        - id: auth-service
+            uri: lb://auth-service
+            predicates:
+              - Path=/api/auth-service/**
+            #去掉/api后再转发请求到相应的服务
+            filters:
+              - StripPrefix=1
+
 eureka:
   instance:
     instance-id: api-gateway
