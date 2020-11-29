@@ -1,5 +1,7 @@
 package com.alu4r.gateway.filter;
 
+import com.alu4r.gateway.utils.JwtUtils;
+import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.cloud.gateway.filter.GlobalFilter;
@@ -10,6 +12,7 @@ import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * 过滤器
@@ -20,6 +23,7 @@ import java.util.Date;
 @Slf4j
 public class MyLogGatewayFilter implements GlobalFilter, Ordered {
 
+    @SneakyThrows
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
 //        log.info("****** come in MyLogGateWayFilter: " + new Date());
@@ -30,6 +34,14 @@ public class MyLogGatewayFilter implements GlobalFilter, Ordered {
 //          exchange.getResponse().setStatusCode(HttpStatus.NOT_ACCEPTABLE);
 //          return exchange.getResponse().setComplete();
 //        }
+        List<String> authorization = exchange.getRequest().getHeaders().get("Authorization");
+        String token = authorization.get(0);
+        if(token == null){
+            throw new Exception("请携带token");
+        }
+        if(!JwtUtils.parseToken(token)){
+            throw new Exception("token失效");
+        }
         return chain.filter(exchange);
     }
 
