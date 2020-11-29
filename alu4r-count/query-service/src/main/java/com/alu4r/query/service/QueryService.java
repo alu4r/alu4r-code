@@ -16,4 +16,11 @@ public interface QueryService {
      * @return
      */
     Integer getViewsCount(String apiId, Date startTime, Date endTime);
+
+    /**
+     * 根据id获取访问量
+     * @param apiId
+     * @return
+     */
+    Integer getViewsCountByApiId(String apiId);
 }

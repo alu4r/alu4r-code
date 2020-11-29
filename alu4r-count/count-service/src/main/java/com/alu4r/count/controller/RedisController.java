@@ -19,7 +19,12 @@ public class RedisController {
     RedisUtil redisUtil;
 
     @RequestMapping("set")
-    public R getKey(String key, String value){
+    public R set(String key, String value){
         return R.ok(redisUtil.set(key, value));
+    }
+
+    @RequestMapping("get")
+    public R get(String key){
+        return R.ok(redisUtil.get(key));
     }
 }

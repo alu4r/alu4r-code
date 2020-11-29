@@ -21,4 +21,5 @@ public class RedisController {
     public R getKey(String key){
         return R.ok(redisUtil.get(key));
     }
+
 }

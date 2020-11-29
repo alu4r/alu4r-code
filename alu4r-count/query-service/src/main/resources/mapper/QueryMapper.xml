@@ -5,4 +5,8 @@
     <select id="getViewsCount" resultType="java.lang.Integer">
         SELECT COUNT(count) FROM api_stats WHERE id = #{apiId} AND  #{startTime} &#60;&#61; time_stamp AND time_stamp &#60; #{endTime}
     </select>
+    <select id="getViewsCountByApiId" resultType="java.lang.Integer">
+        SELECT COUNT(count) FROM api_stats WHERE id = #{apiId}
+    </select>
+
 </mapper>

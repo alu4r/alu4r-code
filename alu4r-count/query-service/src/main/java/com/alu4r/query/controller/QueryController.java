@@ -1,6 +1,7 @@
 package com.alu4r.query.controller;
 
 import com.alu4r.query.service.QueryService;
+import com.alu4r.query.utils.RedisUtil;
 import com.baomidou.mybatisplus.extension.api.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
@@ -18,6 +19,8 @@ import java.util.Date;
 @RestController
 @RequestMapping("query")
 public class QueryController {
+    @Autowired
+    RedisUtil redisUtil;
 
     @Autowired
     QueryService queryService;
@@ -34,6 +37,23 @@ public class QueryController {
     public R getViewsCount(String apiId, Date startTime, Date endTime){
         Integer viewsCount = queryService.getViewsCount(apiId, startTime, endTime);
         return R.ok(viewsCount);
+    }
+
+    /**
+     * 根据id查询前一分钟的访问量
+     * @param apiId
+     * @return
+     */
+    @GetMapping("getViewsCountByApiId")
+    public R getViewsCountByApiId(String apiId){
+        StringBuilder key = new StringBuilder("count:" + apiId);
+        Integer count = (Integer) redisUtil.get(key.toString());
+        if(count == null){
+            count = queryService.getViewsCountByApiId(apiId);
+            redisUtil.set(key.toString(), count, 60);
+            return R.ok(count);
+        }
+        return R.ok(count);
     }
 
 

@@ -31,4 +31,16 @@ public class QueryServiceImpl implements QueryService {
         Integer count = queryMapper.getViewsCount(apiId, startTime, endTime);
         return count;
     }
+
+    /**
+     * 根据id获取访问量
+     *
+     * @param apiId
+     * @return
+     */
+    @Override
+    public Integer getViewsCountByApiId(String apiId) {
+        Integer count = queryMapper.getViewsCountByApiId(apiId);
+        return count;
+    }
 }

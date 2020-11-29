@@ -21,4 +21,11 @@ public interface QueryMapper {
      * @return
      */
     Integer getViewsCount(@Param("apiId") String apiId, @Param("startTime")Date startTime, @Param("endTime")Date endTime);
+
+    /**
+     * 根据id获取访问量
+     * @param apiId
+     * @return
+     */
+    Integer getViewsCountByApiId(@Param("apiId") String apiId);
 }
