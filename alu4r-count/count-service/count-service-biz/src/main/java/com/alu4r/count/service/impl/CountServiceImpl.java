@@ -1,7 +1,7 @@
 package com.alu4r.count.service.impl;
 
+import com.alu4r.count.api.domain.ApiStats;
 import com.alu4r.count.dao.ApiStatsDao;
-import com.alu4r.count.entity.ApiStats;
 import com.alu4r.count.service.CountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

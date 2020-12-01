@@ -12,8 +12,8 @@
     <artifactId>query-service</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>query-service-biz</module>
         <module>query-service-api</module>
+        <module>query-service-biz</module>
     </modules>
 
 </project>

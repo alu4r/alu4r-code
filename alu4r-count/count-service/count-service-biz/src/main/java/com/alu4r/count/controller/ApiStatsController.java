@@ -1,7 +1,7 @@
 package com.alu4r.count.controller;
 
 
-import com.alu4r.count.entity.ApiStats;
+import com.alu4r.count.api.domain.ApiStats;
 import com.alu4r.count.service.ApiStatsService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.api.ApiController;

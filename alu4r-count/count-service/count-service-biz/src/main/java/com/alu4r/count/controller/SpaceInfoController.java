@@ -1,7 +1,7 @@
 package com.alu4r.count.controller;
 
 
-import com.alu4r.count.entity.SpaceInfo;
+import com.alu4r.count.api.domain.SpaceInfo;
 import com.alu4r.count.service.SpaceInfoService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.api.ApiController;

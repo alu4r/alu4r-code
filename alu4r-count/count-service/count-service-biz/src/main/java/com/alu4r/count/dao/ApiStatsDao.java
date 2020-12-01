@@ -1,6 +1,6 @@
 package com.alu4r.count.dao;
 
-import com.alu4r.count.entity.ApiStats;
+import com.alu4r.count.api.domain.ApiStats;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 

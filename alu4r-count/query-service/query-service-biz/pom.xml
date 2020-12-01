@@ -12,6 +12,11 @@
     <artifactId>query-service-biz</artifactId>
 
     <dependencies>
+        <dependency>
+            <groupId>com.alu4r</groupId>
+            <artifactId>query-service-api</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
         <!--redis相关得操作-->
         <dependency>
             <groupId>org.springframework.boot</groupId>

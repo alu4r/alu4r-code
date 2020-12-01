@@ -1,6 +1,6 @@
 package com.alu4r.count.service;
 
-import com.alu4r.count.entity.SpaceInfo;
+import com.alu4r.count.api.domain.SpaceInfo;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

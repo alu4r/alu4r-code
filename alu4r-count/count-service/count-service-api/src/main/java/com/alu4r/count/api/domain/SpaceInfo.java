@@ -1,4 +1,4 @@
-package com.alu4r.count.entity;
+package com.alu4r.count.api.domain;
 
 import com.baomidou.mybatisplus.extension.activerecord.Model;
 import lombok.Data;

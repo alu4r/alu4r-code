@@ -1,7 +1,7 @@
 package com.alu4r.count.service.impl;
 
 import com.alu4r.count.dao.SpaceInfoDao;
-import com.alu4r.count.entity.SpaceInfo;
+import com.alu4r.count.api.domain.SpaceInfo;
 import com.alu4r.count.service.SpaceInfoService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;

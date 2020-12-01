@@ -1,6 +1,6 @@
 package com.alu4r.count.service;
 
-import com.alu4r.count.entity.ApiStats;
+import com.alu4r.count.api.domain.ApiStats;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

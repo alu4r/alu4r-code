@@ -1,8 +1,8 @@
 package com.alu4r.count.service.impl;
 
-import com.alu4r.count.dao.ApiInfoDao;
-import com.alu4r.count.entity.ApiInfo;
+import com.alu4r.count.api.domain.ApiInfo;
 import com.alu4r.count.service.ApiInfoService;
+import com.alu4r.count.dao.ApiInfoDao;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
