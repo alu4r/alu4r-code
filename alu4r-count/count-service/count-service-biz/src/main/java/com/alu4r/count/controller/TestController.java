@@ -1,9 +1,6 @@
 package com.alu4r.count.controller;
 
-import com.alu4r.count.utils.RedisUtil;
 import com.baomidou.mybatisplus.extension.api.R;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
