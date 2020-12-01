@@ -1,7 +1,9 @@
 package com.alu4r.auth.entity;
 
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+import lombok.Data;
 
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 /**
@@ -11,38 +13,24 @@ import java.io.Serializable;
  * @since 2020-11-29 16:04:42
  */
 @SuppressWarnings("serial")
+@Data
 public class UserInfo extends Model<UserInfo> {
 
+    /**
+     * id
+     */
     private String id;
-    //用户名
+
+    /**
+     * 用户名
+     */
+    @NotBlank(message = "用户名不能为空")
     private String userName;
-    //密码
+    /**
+     * 密码
+     */
+    @NotBlank(message = "密码不能为空")
     private String passWord;
-
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
-    }
-
-    public String getPassWord() {
-        return passWord;
-    }
-
-    public void setPassWord(String passWord) {
-        this.passWord = passWord;
-    }
 
     /**
      * 获取主键值

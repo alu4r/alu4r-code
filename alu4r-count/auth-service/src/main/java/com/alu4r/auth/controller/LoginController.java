@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import javax.validation.Valid;
 
 /**
  * @description:
@@ -32,7 +33,7 @@ public class LoginController {
      * @return 所有数据
      */
     @PostMapping("public")
-    public R login(UserInfo userInfo) {
+    public R login(@Valid UserInfo userInfo) {
         QueryWrapper<UserInfo> queryWrapper = new QueryWrapper();
         queryWrapper.eq("user_name",userInfo.getUserName())
                 .eq("pass_word", userInfo.getPassWord());

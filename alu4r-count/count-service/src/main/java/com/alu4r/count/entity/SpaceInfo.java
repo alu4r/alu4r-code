@@ -1,6 +1,7 @@
 package com.alu4r.count.entity;
 
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+import lombok.Data;
 
 import java.io.Serializable;
 
@@ -11,28 +12,12 @@ import java.io.Serializable;
  * @since 2020-11-26 15:06:09
  */
 @SuppressWarnings("serial")
+@Data
 public class SpaceInfo extends Model<SpaceInfo> {
 
     private String id;
     //空间名称
     private String name;
-
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     /**
      * 获取主键值

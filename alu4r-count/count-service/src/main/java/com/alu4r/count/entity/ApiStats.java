@@ -1,6 +1,7 @@
 package com.alu4r.count.entity;
 
 import com.baomidou.mybatisplus.extension.activerecord.Model;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -12,6 +13,7 @@ import java.util.Date;
  * @since 2020-11-26 15:06:02
  */
 @SuppressWarnings("serial")
+@Data
 public class ApiStats extends Model<ApiStats> {
 
     private String id;
@@ -24,30 +26,6 @@ public class ApiStats extends Model<ApiStats> {
         this.id = id;
         this.timeStamp = new Date();
         this.count = 1;
-    }
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    public Date getTimeStamp() {
-        return timeStamp;
-    }
-
-    public void setTimeStamp(Date timeStamp) {
-        this.timeStamp = timeStamp;
-    }
-
-    public Integer getCount() {
-        return count;
-    }
-
-    public void setCount(Integer count) {
-        this.count = count;
     }
 
     /**
