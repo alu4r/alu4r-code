@@ -38,7 +38,7 @@ public class MyLogGatewayFilter implements GlobalFilter, Ordered {
         if(url.contains("public")){
             return chain.filter(exchange);
         }
-        List<String> authorization = exchange.getRequest().getHeaders().get("Authorization");
+        List<String> authorization = exchange.getRequest().getHeaders().get("X-Access-Token");
         String token = authorization.get(0);
         if(token == null){
             throw new Exception("请携带token");

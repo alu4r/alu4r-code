@@ -5,10 +5,13 @@ import com.alu4r.query.utils.RedisUtil;
 import com.baomidou.mybatisplus.extension.api.R;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
 import java.util.Date;
 
 /**
@@ -18,6 +21,7 @@ import java.util.Date;
  */
 @RestController
 @RequestMapping("query")
+@Validated
 public class QueryController {
     @Autowired
     RedisUtil redisUtil;
@@ -34,7 +38,7 @@ public class QueryController {
      * @return
      */
     @GetMapping("getViewsCount")
-    public R getViewsCount(String apiId, Date startTime, Date endTime){
+    public R getViewsCount(@Valid @NotBlank(message = "apiId 不能为空") String apiId, Date startTime, Date endTime){
         Integer viewsCount = queryService.getViewsCount(apiId, startTime, endTime);
         return R.ok(viewsCount);
     }

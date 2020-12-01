@@ -4,9 +4,13 @@ import com.alu4r.count.service.CountService;
 import com.baomidou.mybatisplus.extension.api.ApiController;
 import com.baomidou.mybatisplus.extension.api.R;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
 
 /**
  * @description: 计数控制器
@@ -15,6 +19,7 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("count")
+@Validated
 public class CountController extends ApiController {
 
     @Autowired
@@ -27,7 +32,7 @@ public class CountController extends ApiController {
      * @return
      */
     @PostMapping("countViewEvent")
-    public R countViewEvent(String apiId) {
+    public R countViewEvent(@Valid @NotBlank(message = "apiId 不能为空") String apiId) {
         return R.ok(countService.countViewEvent(apiId));
     }
 }
