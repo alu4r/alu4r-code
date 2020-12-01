@@ -9,11 +9,11 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>query-service</artifactId>
+    <artifactId>alu4r-common</artifactId>
     <packaging>pom</packaging>
     <modules>
-        <module>query-service-biz</module>
-        <module>query-service-api</module>
+        <module>alu4r-common-core</module>
     </modules>
+
 
 </project>
