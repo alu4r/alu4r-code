@@ -1,5 +1,6 @@
 package com.alu4r.query.controller;
 
+import com.alu4r.core.exception.BizException;
 import com.baomidou.mybatisplus.extension.api.R;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,11 @@ public class TestController {
 
     @RequestMapping("signal")
     public R signal(){
-        return R.ok("成功发送信号！");
+        boolean bool = true;
+        if(bool){
+            throw new BizException("500","用户姓名不能为空！");
+        }
+        return R.ok("ok");
     }
 
 }
