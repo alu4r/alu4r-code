@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.alu4r.com.alu4r.query.mapper.QueryMapper">
+<mapper namespace="com.alu4r.query.mapper.QueryMapper">
 
     <select id="getViewsCount" resultType="java.lang.Integer">
         SELECT COUNT(count) FROM api_stats WHERE id = #{apiId} AND  #{startTime} &#60;&#61; time_stamp AND time_stamp &#60; #{endTime}

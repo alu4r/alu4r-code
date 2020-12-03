@@ -10,7 +10,8 @@ import java.util.Arrays;
 @Component
 public class MyBeanFactoryPostProcessor implements BeanFactoryPostProcessor {
 
-	public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
+	@Override
+    public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
 		System.out.println("MyBeanFactoryPostProcessor...postProcessBeanFactory...");
 		int count = beanFactory.getBeanDefinitionCount();
 		String[] names = beanFactory.getBeanDefinitionNames();
