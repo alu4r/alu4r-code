@@ -106,4 +106,5 @@ public class ExtConfig {
 		return new Blue();
 	}
 
+
 }

@@ -7,10 +7,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyApplicationListener implements ApplicationListener<ApplicationEvent> {
 
-	//当容器中发布此事件以后，方法触发
-	public void onApplicationEvent(ApplicationEvent event) {
-		// TODO Auto-generated method stub
-		System.out.println("收到事件："+event);
-	}
 
+    /**
+     * Handle an application event.
+     *
+     * @param event the event to respond to
+     */
+    @Override
+    public void onApplicationEvent(ApplicationEvent event) {
+        System.out.println("收到自定义事件："+ event);
+    }
 }
