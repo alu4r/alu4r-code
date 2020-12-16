@@ -15,11 +15,11 @@ public class BizException extends RuntimeException{
     /**
      * 错误码
      */
-    protected String errorCode;
+    protected String code;
+
     /**
      * 错误信息
      */
-    protected String errorMsg;
-
+    protected String msg;
 
 }

@@ -17,12 +17,12 @@ import javax.validation.constraints.Size;
  */
 @Slf4j
 @ControllerAdvice
+@ResponseBody
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(value = BizException.class)
-    @ResponseBody
     public R bizExceptionHandler(BizException e){
-        log.info("发生业务异常！原因是：{}", e.getErrorMsg());
+        log.info("发生业务异常！原因是：{}", e.getMsg());
         return R.failed("发生业务异常");
     }
 }
