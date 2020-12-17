@@ -18,10 +18,11 @@ spring:
   datasource:
     druid:
       type: com.alibaba.druid.pool.DruidDataSource
-      driver-class-name: oracle.jdbc.OracleDriver
-      url: jdbc:oracle:thin:@10.2.7.33:1521:sjyw021
-      username: nftecbcdb
-      password: bcnftec1218
+#      driver-class-name: oracle.jdbc.OracleDriver
+#      url: jdbc:oracle:thin:@10.2.7.33:1521:sjyw021
+#      username: nftecbcdb
+#      password: bcnftec1218
+
 
       # 连接池配置
       initial-size: 5
