@@ -34,18 +34,20 @@ public class MyLogGatewayFilter implements GlobalFilter, Ordered {
 //          exchange.getResponse().setStatusCode(HttpStatus.NOT_ACCEPTABLE);
 //          return exchange.getResponse().setComplete();
 //        }
-        String url = exchange.getRequest().getURI().getPath();
-        if(url.contains("public")){
-            return chain.filter(exchange);
-        }
-        List<String> authorization = exchange.getRequest().getHeaders().get("X-Access-Token");
-        String token = authorization.get(0);
-        if(token == null){
-            throw new Exception("请携带token");
-        }
-        if(!JwtUtils.parseToken(token)){
-            throw new Exception("token失效");
-        }
+
+
+//        String url = exchange.getRequest().getURI().getPath();
+//        if(url.contains("public")){
+//            return chain.filter(exchange);
+//        }
+//        List<String> authorization = exchange.getRequest().getHeaders().get("X-Access-Token");
+//        String token = authorization.get(0);
+//        if(token == null){
+//            throw new Exception("请携带token");
+//        }
+//        if(!JwtUtils.parseToken(token)){
+//            throw new Exception("token失效");
+//        }
         return chain.filter(exchange);
     }
 

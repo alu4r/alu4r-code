@@ -16,10 +16,6 @@ public class TestController {
 
     @RequestMapping("signal")
     public R signal(){
-        boolean bool = true;
-        if(bool){
-            throw new BizException("500","用户姓名不能为空！");
-        }
         return R.ok("ok");
     }
 
