@@ -3,6 +3,7 @@ package com.alu4r.query.controller;
 import com.alu4r.query.service.QueryService;
 import com.alu4r.query.utils.RedisUtil;
 import com.baomidou.mybatisplus.extension.api.R;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +19,7 @@ import java.util.Date;
  * @author: alu4r
  * @date: 2020/11/19 23:06
  */
+@Slf4j
 @RestController
 @RequestMapping("query")
 @Validated
@@ -27,7 +29,6 @@ public class QueryController {
 
     @Autowired
     QueryService queryService;
-
 
     /**
      * 根据id和时间段查询统计的数量
