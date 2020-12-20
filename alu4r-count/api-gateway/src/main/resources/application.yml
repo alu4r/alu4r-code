@@ -7,6 +7,9 @@ spring:
   application:
     name: api-gateway
   cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
     gateway:
       discovery:
         locator:
@@ -35,17 +38,17 @@ spring:
           filters:
             - StripPrefix=1
 
-eureka:
-  instance:
-    instance-id: api-gateway
-    #访问路径可以显示IP地址
-    prefer-ip-address: true
-    #Eureka客户端向服务端发送心跳的时间间隔.单位为秒(默认30 秒)
-    lease-renewal-interval-in-seconds: 1
-    #Eureka服务端在收到最后一次心跳等待时间上限.单位为秒(默认90 秒),超时将剔除服务
-    lease-expiration-duration-in-seconds: 2
-  client:
-    fetch-registry: true
-    register-with-eureka: true
-    service-url:
-      defaultZone: http://127.0.0.1:7001/eureka/
+#eureka:
+#  instance:
+#    instance-id: api-gateway
+#    #访问路径可以显示IP地址
+#    prefer-ip-address: true
+#    #Eureka客户端向服务端发送心跳的时间间隔.单位为秒(默认30 秒)
+#    lease-renewal-interval-in-seconds: 1
+#    #Eureka服务端在收到最后一次心跳等待时间上限.单位为秒(默认90 秒),超时将剔除服务
+#    lease-expiration-duration-in-seconds: 2
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true
+#    service-url:
+#      defaultZone: http://127.0.0.1:7001/eureka/
