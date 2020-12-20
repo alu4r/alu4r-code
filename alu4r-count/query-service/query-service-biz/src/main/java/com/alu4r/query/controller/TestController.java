@@ -3,6 +3,7 @@ package com.alu4r.query.controller;
 import com.alibaba.csp.sentinel.annotation.SentinelResource;
 import com.alibaba.csp.sentinel.slots.block.BlockException;
 import com.alu4r.core.exception.BizException;
+import com.alu4r.query.handler.CustomerBlockHandler;
 import com.baomidou.mybatisplus.extension.api.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -59,6 +60,16 @@ public class TestController {
         //sentinel系统默认的提示：Blocked by Sentinel (flow limiting)
         return R.ok("Sentinel流量防卫兵接手");
     }
+
+
+    @GetMapping("customerBlockHandler")
+    @SentinelResource(value = "customerBlockHandler",
+            blockHandlerClass = CustomerBlockHandler.class,
+            blockHandler = "handlerException2")
+    public R customerBlockHandler() {
+        return R.ok("用户自定义限流处理器");
+    }
+
 
     @RequestMapping("signal")
     public R signal() {
