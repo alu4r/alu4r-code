@@ -52,23 +52,26 @@ spring:
   #      aop-patterns: com.*
 
   cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
     sentinel:
       transport:
         dashboard: localhost:8080 # 配置Sentinel dashboard地址
         # 默认8719端口 假如被占用会默认+1寻找合适的端口
         port: 8719
 
-eureka:
-  instance:
-    instance-id: query-service
-    #访问路径可以显示IP地址
-    prefer-ip-address: true
-    #Eureka客户端向服务端发送心跳的时间间隔.单位为秒(默认30 秒)
-    lease-renewal-interval-in-seconds: 1
-    #Eureka服务端在收到最后一次心跳等待时间上限.单位为秒(默认90 秒),超时将剔除服务
-    lease-expiration-duration-in-seconds: 2
-  client:
-    fetch-registry: true
-    register-with-eureka: true #不向注册中心注册
-    service-url:
-      defaultZone: http://127.0.0.1:7001/eureka/
+#eureka:
+#  instance:
+#    instance-id: query-service
+#    #访问路径可以显示IP地址
+#    prefer-ip-address: true
+#    #Eureka客户端向服务端发送心跳的时间间隔.单位为秒(默认30 秒)
+#    lease-renewal-interval-in-seconds: 1
+#    #Eureka服务端在收到最后一次心跳等待时间上限.单位为秒(默认90 秒),超时将剔除服务
+#    lease-expiration-duration-in-seconds: 2
+#  client:
+#    fetch-registry: true
+#    register-with-eureka: true #不向注册中心注册
+#    service-url:
+#      defaultZone: http://127.0.0.1:7001/eureka/
