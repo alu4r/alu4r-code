@@ -14,6 +14,7 @@
         <module>netty</module>
         <module>leetcode</module>
         <module>service-area</module>
+        <module>concurrent</module>
     </modules>
 
 </project>
