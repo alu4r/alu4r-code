@@ -30,6 +30,7 @@ public class ExchangerTest {
             @Override
             public void run() {
                 try {
+
                     // B录入银行流水数据
                     String B = "银行流水B";
                     String A = exgr.exchange(B);
